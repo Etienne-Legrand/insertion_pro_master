@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="149"
-  DTS:VersionGUID="{F3770893-24A4-4742-B731-2A194B6F70A8}">
+  DTS:VersionBuild="159"
+  DTS:VersionGUID="{FC06451C-C433-4720-A181-7070C10D51C3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6702,13 +6702,13 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? "NULL" : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expression claire de colonne dérivée"
                           expressionType="Notify"
-                          name="FriendlyExpression">(taux_dinsertion == "ns" || taux_dinsertion == "nd" || TRIM(taux_dinsertion) == "") ? "NULL" : taux_dinsertion</property>
+                          name="FriendlyExpression">(taux_dinsertion == "ns" || taux_dinsertion == "nd" || TRIM(taux_dinsertion) == "") ? NULL(DT_WSTR,50) : taux_dinsertion</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6732,13 +6732,13 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "") ? "NULL" : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == ".") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expression claire de colonne dérivée"
                           expressionType="Notify"
-                          name="FriendlyExpression">(salaire_brut_annuel_estime == "ns" || salaire_brut_annuel_estime == "nd" || TRIM(salaire_brut_annuel_estime) == "") ? "NULL" : salaire_brut_annuel_estime</property>
+                          name="FriendlyExpression">(salaire_brut_annuel_estime == "ns" || salaire_brut_annuel_estime == "nd" || TRIM(salaire_brut_annuel_estime) == "" || TRIM(salaire_brut_annuel_estime) == ".") ? NULL(DT_WSTR,50) : salaire_brut_annuel_estime</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6756,13 +6756,13 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">[TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? "NULL" : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                          name="Expression">[TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? NULL(DT_WSTR,50) : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expression claire de colonne dérivée"
                           expressionType="Notify"
-                          name="FriendlyExpression">TRIM(nombre_de_reponses) == "" ? "NULL" : nombre_de_reponses</property>
+                          name="FriendlyExpression">TRIM(nombre_de_reponses) == "" ? NULL(DT_WSTR,50) : nombre_de_reponses</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -7366,13 +7366,13 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "NULL") ? #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || [ISNULL](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]})) ? #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expression claire de colonne dérivée"
                           expressionType="Notify"
-                          name="FriendlyExpression">(nombre_de_reponses == "0" || nombre_de_reponses == "NULL") ? nombre_de_reponses : taux_de_reponse</property>
+                          name="FriendlyExpression">(nombre_de_reponses == "0" || ISNULL(nombre_de_reponses)) ? nombre_de_reponses : taux_de_reponse</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8676,9 +8676,7 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,3.74358974358984,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -8708,7 +8706,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,4.25641025641028,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8730,7 +8730,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,3.91666666666674,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

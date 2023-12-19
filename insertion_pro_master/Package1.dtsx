@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="159"
-  DTS:VersionGUID="{FC06451C-C433-4720-A181-7070C10D51C3}">
+  DTS:VersionBuild="174"
+  DTS:VersionGUID="{67C47256-1C51-4265-BFDD-CC3C1F0E9D87}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,6 +29,230 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Erreur]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{a2ccb0e8-f856-4b09-ac25-e198cbfd74f5}"
+      DTS:ObjectName="Erreur">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\Dev\EPSI\Architecture décisionnelle\Atelier 2\franswap\Erreur.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="annee"
+              DTS:DTSID="{A1AAFEFD-49FF-4604-9376-7B0337347863}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="diplome"
+              DTS:DTSID="{2D789EF2-71D4-4A1C-AE42-F2A6046BC998}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="etablissement"
+              DTS:DTSID="{3E45C587-533F-4B39-ADCB-071E01E84BD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="academie"
+              DTS:DTSID="{A0B05BFF-37A0-4203-B656-AE410C94E334}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="domaine"
+              DTS:DTSID="{F560DF86-0C0E-40D3-A95B-40D45A4CB585}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="discipline"
+              DTS:DTSID="{70C89E72-86AC-4FB8-BD59-DFF9AF4238C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="taux_de_reponse"
+              DTS:DTSID="{86AC86CE-AFAB-476C-AA18-A80999792174}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="taux_dinsertion"
+              DTS:DTSID="{DFF22F8D-08FA-4EDF-8B31-0032294EE0B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="taux_d_emploi"
+              DTS:DTSID="{643B93A6-CD80-4EEC-921B-C2C9049C9C9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salaire_brut_annuel_estime"
+              DTS:DTSID="{3B71E674-80F2-4626-9248-73516CC1FCC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="situation"
+              DTS:DTSID="{0F9B0C77-1DA5-45B5-BFF6-006C00DF7877}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nombre_de_reponses"
+              DTS:DTSID="{9219F538-DBBA-491C-8DD2-5DCEA6F1E29B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="poids_de_la_discipline"
+              DTS:DTSID="{4FAAE44B-2E20-4FFD-BEDD-113E491CBEA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idDiscipline"
+              DTS:DTSID="{58AE9AB6-7CF9-4485-8294-52B13EC5F1B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idDiplome"
+              DTS:DTSID="{073D4387-5E3E-4358-807F-E01F8B98DC79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idLieu"
+              DTS:DTSID="{96CDBF0F-4FED-4B95-BC65-62A8CDE29C85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IdTemps"
+              DTS:DTSID="{943C5F8D-6D8D-42A6-BB3F-CE1D02AD4945}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SituationMois"
+              DTS:DTSID="{D2FCD2A8-9629-47AF-ACBF-8CD860111946}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NombreReponsesCAST(INT)"
+              DTS:DTSID="{FEA1C793-23B2-42E7-A2BB-4E7D3960D65E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TauxInsertionCAST(INT)"
+              DTS:DTSID="{660DF80E-2073-49B1-8BC4-76942FE5F32B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalaireBrutAnnuelEstimeCAST(INT)"
+              DTS:DTSID="{6F1B3BC8-D714-49E3-9DD5-8AB08C06CDC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TauxReponsesCAST(INT)"
+              DTS:DTSID="{834BCC43-EF7F-4934-AF18-412ABD698773}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{DCD90D8C-3C44-4F5F-8F9C-2839478F8DD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{B1468B47-9104-4B9B-A8CC-E6356AF0D1E3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[insert_pro]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{DBBF7EB5-1F29-4D1B-9BD1-86B9A29CAB5F}"
@@ -42,7 +266,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Dev\EPSI\Architecture décisionnelle\Atelier 2\insertion_pro_master\fr-esr-insertion_professionnelle-master.csv">
+          DTS:ConnectionString="D:\Dev\EPSI\Architecture décisionnelle\Atelier 2\franswap\fr-esr-insertion_professionnelle-master.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +274,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="annee"
-              DTS:DTSID="{46790917-DB6D-4AAF-9CB6-01F62A66DE38}"
+              DTS:DTSID="{8DB05469-E012-474C-866D-BB6E4C5088F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +283,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="diplome"
-              DTS:DTSID="{2DE510F3-82F8-4826-A288-B84F5C086E9D}"
+              DTS:DTSID="{C3775383-ED24-40AB-8748-1AD961EF3786}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +292,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="numero_de_l_etablissement"
-              DTS:DTSID="{F4BACA1D-06E4-406F-91AF-2A51F3787FDD}"
+              DTS:DTSID="{294A9A4E-C860-44A9-ADBD-E165BA05E5FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +301,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="etablissement"
-              DTS:DTSID="{A1B0F755-763D-4648-992B-13D3ACE2B41F}"
+              DTS:DTSID="{CAA633F2-2EC3-4884-B91E-5213410C1F5C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +310,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="etablissementactuel"
-              DTS:DTSID="{C09A4EED-C105-431E-9EA7-BE10156591BA}"
+              DTS:DTSID="{EA2842E8-3B0C-4496-86A8-59BDB67976F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +319,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="code_de_l_academie"
-              DTS:DTSID="{B1323EA7-034E-43DF-AD9F-7E19404EF00E}"
+              DTS:DTSID="{11CE9C24-3053-4E61-8D74-6A216A9B6F36}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,7 +328,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="academie"
-              DTS:DTSID="{CC70288C-C6E8-4A52-B23B-1F38111C1288}"
+              DTS:DTSID="{441AFC89-C594-46FB-A09B-A79EF4ECDEBD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +337,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="code_du_domaine"
-              DTS:DTSID="{715F245C-9110-40DA-854B-2FB8C20798E8}"
+              DTS:DTSID="{52AAF5F9-843C-46A4-B20F-A5AC2E6B571C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +346,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="domaine"
-              DTS:DTSID="{D2368C1F-B344-4D94-88C8-C035B30A6DA0}"
+              DTS:DTSID="{5FAF3D46-8041-4496-A338-C77BCB469917}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +355,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="code_de_la_discipline"
-              DTS:DTSID="{6CE9290F-7EC1-4E4D-9139-94AC0CE2D618}"
+              DTS:DTSID="{AB214D9A-C54D-47BF-AC55-A57287A32932}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +364,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="discipline"
-              DTS:DTSID="{EF4F2424-4E99-4968-A10E-777E0F7778C9}"
+              DTS:DTSID="{68C1E5EA-4472-4785-9069-C6497A1CD2EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +373,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="situation"
-              DTS:DTSID="{541AA27E-9AC5-4558-9CDF-F56F8263D380}"
+              DTS:DTSID="{A06B7D31-66B6-49FA-B0FD-8E3388310EAD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -158,7 +382,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="remarque"
-              DTS:DTSID="{1F103B57-37D9-48BA-9946-C18FFC0F0584}"
+              DTS:DTSID="{9ED4CD6F-C29F-4185-A38D-3C174349BDF9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +391,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nombre_de_reponses"
-              DTS:DTSID="{E2CC91A0-C01C-4B98-859B-9BA886E39C49}"
+              DTS:DTSID="{AF3DB411-5D19-406D-A79C-9F59C3A2BC31}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +400,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_de_reponse"
-              DTS:DTSID="{8337E232-3F45-4482-8788-8E083D16B115}"
+              DTS:DTSID="{40E4AF7A-5D95-4217-B6B1-04BF2EE7F0F1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +409,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="poids_de_la_discipline"
-              DTS:DTSID="{FA8E2967-76FC-42A6-B7C8-1BBA51DC2FCB}"
+              DTS:DTSID="{458CE145-4A6C-4D6A-AA41-575C740A10C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -194,7 +418,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_dinsertion"
-              DTS:DTSID="{007404BA-2AF6-4F27-9A53-1035B3874F54}"
+              DTS:DTSID="{A60A3B46-A686-4599-A629-C931BB2ECB68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -203,7 +427,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_d_emploi"
-              DTS:DTSID="{D16A3A66-5EE6-43DF-B2D7-D13C87E2C6F0}"
+              DTS:DTSID="{A2236CC8-DAAE-43C8-A60D-21261D5B16A5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +436,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_d_emploi_salarie_en_france"
-              DTS:DTSID="{5A8689E5-DA64-4ED4-A40B-7C06D6CBD9A0}"
+              DTS:DTSID="{17235446-7227-491A-B7E2-32C4E22551FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,7 +445,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_cadre_ou_professions_intermediaires"
-              DTS:DTSID="{DCA3A96F-E5C0-499B-9BDC-80FB7718FE02}"
+              DTS:DTSID="{7A4511CB-B6CF-48E1-A36B-43A94A7BCE71}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +454,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_stables"
-              DTS:DTSID="{0A64CC1C-B09E-47B7-BCF7-0B9B77395EA1}"
+              DTS:DTSID="{D92BE7DD-D07D-468F-85DE-225B347AA7E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -239,7 +463,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_a_temps_plein"
-              DTS:DTSID="{5F70070A-C724-459E-9270-CDD180DDAE26}"
+              DTS:DTSID="{8CD4DA27-D121-4ADE-8484-C97FC2F8FB94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -248,7 +472,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_median_des_emplois_a_temps_plein"
-              DTS:DTSID="{96C455C9-19C2-411B-AAA2-8D0FFE120597}"
+              DTS:DTSID="{AD3B8EC3-5313-4355-A604-29A48B6D2CE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -257,7 +481,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_brut_annuel_estime"
-              DTS:DTSID="{3FA850FF-9452-47AB-8936-539724970436}"
+              DTS:DTSID="{7764CC3A-91B6-4127-A432-89F25298ED6C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -266,7 +490,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="de_diplomes_boursiers"
-              DTS:DTSID="{F039BCAE-FB76-4B54-83C3-02E49037C5FA}"
+              DTS:DTSID="{94826A64-383B-4C63-B763-CE293E7C9A4A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +499,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_de_chomage_regional"
-              DTS:DTSID="{A82B1193-C25D-48BA-A357-7A98AFD2CB4A}"
+              DTS:DTSID="{E101D8F8-C3C6-41E5-A49B-F70B7B0D1CB5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -284,7 +508,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_mensuel_median_regional"
-              DTS:DTSID="{6B9FEF62-A6EA-4B60-89BC-AD8EA726C595}"
+              DTS:DTSID="{CC674C0C-A39A-4035-ABE6-95F853EC3FDE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -293,7 +517,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_cadre"
-              DTS:DTSID="{034303AF-65C7-4A53-9B27-2F63BF054AFD}"
+              DTS:DTSID="{9844228B-5803-4A97-950A-C6CB38C1B4D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -302,7 +526,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_exterieurs_a_la_region_de_luniversite"
-              DTS:DTSID="{EFBF6A83-CFCA-46E4-A7E0-2A007A271A3D}"
+              DTS:DTSID="{3BBE235E-F70D-48AA-B051-31C4793DA088}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -311,7 +535,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="femmes"
-              DTS:DTSID="{8B7467D0-2DBF-473E-B9A3-E32D5E8EDF8F}"
+              DTS:DTSID="{9BF29FA1-007F-4CEA-8FDC-0BAAF06C7235}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -320,7 +544,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_mensuel_regional_1er_quartile"
-              DTS:DTSID="{7689C072-DC9E-45F7-AA4A-1EAC3FD594C2}"
+              DTS:DTSID="{A6CE5B67-BEAC-423C-846E-BA41636B2A07}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -329,7 +553,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_mensuel_regional_3eme_quartile"
-              DTS:DTSID="{85324A71-486D-4B47-91CE-CA7D975FCDC1}"
+              DTS:DTSID="{FE44C7BB-86E1-4232-8024-3FA6CEF0D4E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -338,7 +562,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cle_etab"
-              DTS:DTSID="{3B280F40-104A-48E3-906F-8EEF6287AFAB}"
+              DTS:DTSID="{D71D4744-5438-4E8F-BA27-BF65F4C9CEFE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +571,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cle_disc"
-              DTS:DTSID="{079029BA-1606-4880-8012-907E913FB958}"
+              DTS:DTSID="{DB6C4FDE-188A-4A79-BF61-ED3792C11AB5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -356,7 +580,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="id_paysage"
-              DTS:DTSID="{C119D778-1E73-456B-B25D-B6FF5AAE298B}"
+              DTS:DTSID="{DA05C53A-0A00-48F3-8F14-F0D92E260F4A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -5847,6 +6071,313 @@ ORDER BY NomEtablissement</property>
               </outputs>
             </component>
             <component
+              refId="Package\Integration Fait\Destination de fichier plat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Destination de fichier plat"
+              localeId="1036"
+              name="Destination de fichier plat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\Destination de fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Erreur]"
+                  connectionManagerRefId="Package.ConnectionManagers[Erreur]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  hasSideEffects="true"
+                  name="Entrée de destination de fichier plat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[annee]"
+                      cachedDataType="i4"
+                      cachedName="annee"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[diplome]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="diplome"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[etablissement]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="etablissement"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[academie]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="academie"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[academie]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[domaine]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="domaine"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[domaine]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[discipline]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="discipline"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[taux_de_reponse]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_de_reponse"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[taux_dinsertion]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_dinsertion"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[taux_d_emploi]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_d_emploi"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="salaire_brut_annuel_estime"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[situation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="situation"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[nombre_de_reponses]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre_de_reponses"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[poids_de_la_discipline]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="poids_de_la_discipline"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idDiscipline]"
+                      cachedDataType="i4"
+                      cachedName="idDiscipline"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
+                      lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance].Columns[idDiscipline]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idDiplome]"
+                      cachedDataType="i4"
+                      cachedName="idDiplome"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
+                      lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance].Columns[idDiplome]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idLieu]"
+                      cachedDataType="i4"
+                      cachedName="idLieu"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
+                      lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance].Columns[idLieu]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[IdTemps]"
+                      cachedDataType="i4"
+                      cachedName="IdTemps"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
+                      lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[SituationMois]"
+                      cachedDataType="i4"
+                      cachedName="SituationMois"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
+                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[NombreReponsesCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="NombreReponsesCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[TauxInsertionCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="TauxInsertionCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="SalaireBrutAnnuelEstimeCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[TauxReponsesCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="TauxReponsesCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
+                      dataType="i4"
+                      name="annee" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
+                      dataType="wstr"
+                      length="50"
+                      name="diplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
+                      dataType="wstr"
+                      length="50"
+                      name="etablissement" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
+                      dataType="wstr"
+                      length="50"
+                      name="academie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
+                      dataType="wstr"
+                      length="50"
+                      name="domaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
+                      dataType="wstr"
+                      length="100"
+                      name="discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
+                      dataType="wstr"
+                      length="50"
+                      name="situation" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      dataType="wstr"
+                      length="50"
+                      name="nombre_de_reponses" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_de_reponse" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      dataType="wstr"
+                      length="50"
+                      name="poids_de_la_discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_dinsertion" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_d_emploi" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_brut_annuel_estime" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
+                      dataType="i4"
+                      name="idDiscipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
+                      dataType="i4"
+                      name="idDiplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
+                      dataType="i4"
+                      name="idLieu" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
+                      dataType="i4"
+                      name="IdTemps" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
+                      dataType="i4"
+                      name="SituationMois" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
+                      dataType="i4"
+                      name="NombreReponsesCAST(INT)" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
+                      dataType="i4"
+                      name="TauxInsertionCAST(INT)" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      dataType="i4"
+                      name="SalaireBrutAnnuelEstimeCAST(INT)" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
+                      dataType="i4"
+                      name="TauxReponsesCAST(INT)" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
               refId="Package\Integration Fait\New Fact"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
@@ -5914,7 +6445,7 @@ ORDER BY NomEtablissement</property>
                 <input
                   refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB]"
                   errorOrTruncationOperation="Insérer"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="Entrée de destination OLE DB">
                   <inputColumns>
@@ -7422,6 +7953,11 @@ where [refTable].[AnneeTemps] = ?</property>
           </components>
           <paths>
             <path
+              refId="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
+              endId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+              name="Sortie d'erreur de destination OLE DB"
+              startId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB]" />
+            <path
               refId="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
               endId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]"
               name="Sortie de colonne dérivée"
@@ -8706,9 +9242,7 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,4.25641025641028,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8732,6 +9266,34 @@ where [refTable].[AnneeTemps] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-8,3.91666666666674,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Integration Fait\Destination de fichier plat"
+          TopLeft="624,806" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
+          TopLeft="726.25,762">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.9999999999999"
+              Start="0,0"
+              End="0,36.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-83.281484375,13.3754882812499,166.56296875,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

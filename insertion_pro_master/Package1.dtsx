@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="100"
-  DTS:VersionGUID="{414E9662-F059-42D8-9B3F-EC06AA09261F}">
+  DTS:VersionBuild="112"
+  DTS:VersionGUID="{CF60A9FB-88EB-4CA0-8616-C6A8EA1D3031}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -683,18 +683,18 @@
                   name="Entrée gauche de jointure de fusion">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[academie]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="academie"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[academie]" />
-                    <inputColumn
                       refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[etablissement]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="etablissement"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[etablissement]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[academie]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="academie"
+                      lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[academie]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -704,23 +704,23 @@
                   name="Entrée droite de jointure de fusion">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[NomAcademie]"
+                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[NomEtablissement]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="NomAcademie"
+                      cachedName="NomEtablissement"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomAcademie]" />
+                      lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomEtablissement]" />
                     <inputColumn
                       refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[IdLieu]"
                       cachedDataType="i4"
                       cachedName="IdLieu"
                       lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[IdLieu]" />
                     <inputColumn
-                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[NomEtablissement]"
+                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[NomAcademie]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="NomEtablissement"
-                      lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomEtablissement]" />
+                      cachedName="NomAcademie"
+                      lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomAcademie]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -731,6 +731,35 @@
                   isSorted="true"
                   name="Sortie de jointure de fusion">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]"
+                      name="NomEtablissement"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[etablissement]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]"
+                      name="NomAcademie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[academie]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
                       refId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[IdLieuCourant]"
                       dataType="i4"
@@ -770,35 +799,6 @@
                           dataType="System.Int32"
                           description="Colonne d'entrée associée à cette colonne de sortie"
                           name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[NomAcademie]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]"
-                      name="NomEtablissement">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Colonne d'entrée associée à cette colonne de sortie"
-                          name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[etablissement]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]"
-                      name="NomAcademie"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Colonne d'entrée associée à cette colonne de sortie"
-                          name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[academie]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1603,6 +1603,19 @@
                   name="Entrée de fractionnement conditionnel">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel].Columns[NomEtablissement]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NomEtablissement"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel].Columns[NomAcademie]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NomAcademie"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]" />
+                    <inputColumn
                       refId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel].Columns[IdLieuCourant]"
                       cachedDataType="i4"
                       cachedName="IdLieuCourant"
@@ -1619,19 +1632,6 @@
                       cachedLength="50"
                       cachedName="NomAcademieCourant"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademieCourant]" />
-                    <inputColumn
-                      refId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel].Columns[NomEtablissement]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="NomEtablissement"
-                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]" />
-                    <inputColumn
-                      refId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel].Columns[NomAcademie]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="NomAcademie"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1679,13 +1679,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Spécifie l'expression. Cette version d'expression utilise les identificateurs de traçabilité à la place des noms de colonnes."
-                      name="Expression">(#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]} != [TRIM](#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademieCourant]})) || (#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]} != [TRIM](#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissementCourant]}))</property>
+                      name="Expression">(#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]} != [TRIM](#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissementCourant]})) || (#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]} != [TRIM](#{Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademieCourant]}))</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Spécifie la version claire de l'expression. Cette version d'expression utilise les noms de colonnes."
                       expressionType="Notify"
-                      name="FriendlyExpression">(NomAcademie != TRIM(NomAcademieCourant)) || (NomEtablissement != TRIM(NomEtablissementCourant))</property>
+                      name="FriendlyExpression">(NomEtablissement != TRIM(NomEtablissementCourant)) || (NomAcademie != TRIM(NomAcademieCourant))</property>
                     <property
                       dataType="System.Int32"
                       description="Spécifie la position de la condition dans la liste des conditions que la transformation évalue. L'ordre d'évaluation se fait par ordre croissant de valeur."
@@ -2334,16 +2334,11 @@
                   name="Entrée de commande OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].Columns[IdLieuCourant]"
-                      cachedDataType="i4"
-                      cachedName="IdLieuCourant"
-                      externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
-                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[IdLieuCourant]" />
-                    <inputColumn
                       refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].Columns[NomEtablissement]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="NomEtablissement"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]" />
                     <inputColumn
@@ -2351,9 +2346,14 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="NomAcademie"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].Columns[IdLieuCourant]"
+                      cachedDataType="i4"
+                      cachedName="IdLieuCourant"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[IdLieuCourant]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2569,13 +2569,6 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 2]"
-                  deleteOutputOnPathDetached="true"
-                  name="Sortie de multidiffusion 2"
-                  synchronousInputId="Package\Integration Dimensions\Multidiffusion.Inputs[Multidiffusion entrée 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
                   refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 4]"
                   deleteOutputOnPathDetached="true"
                   name="Sortie de multidiffusion 4"
@@ -2584,9 +2577,16 @@
                 </output>
                 <output
                   refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 3]"
-                  dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Sortie de multidiffusion 3"
+                  synchronousInputId="Package\Integration Dimensions\Multidiffusion.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Sortie de multidiffusion 2"
                   synchronousInputId="Package\Integration Dimensions\Multidiffusion.Inputs[Multidiffusion entrée 1]">
                   <externalMetadataColumns />
                 </output>
@@ -2921,6 +2921,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="NomEtablissement"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB].ExternalColumns[NomEtablissement]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomEtablissement]" />
                     <inputColumn
@@ -2928,7 +2929,6 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="NomAcademie"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB].ExternalColumns[NomAcademie]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]" />
                   </inputColumns>
@@ -4385,7 +4385,7 @@ ORDER BY NomDiscipline</property>
                         <property
                           dataType="System.Int32"
                           description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4402,7 +4402,7 @@ ORDER BY NomDiscipline</property>
                         <property
                           dataType="System.Int32"
                           description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4491,23 +4491,6 @@ ORDER BY NomDiscipline</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Integration Dimensions\TriLieux.Inputs[Entrée de tri].Columns[poids_de_la_discipline]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="poids_de_la_discipline"
-                      lineageId="Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie les options de comparaison pour les données caractères."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Spécifie l'ordre de tri de la colonne."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Integration Dimensions\TriLieux.Inputs[Entrée de tri].Columns[taux_dinsertion]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -4547,6 +4530,23 @@ ORDER BY NomDiscipline</property>
                       cachedLength="50"
                       cachedName="salaire_brut_annuel_estime"
                       lineageId="Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Dimensions\TriLieux.Inputs[Entrée de tri].Columns[poids_de_la_discipline]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="poids_de_la_discipline"
+                      lineageId="Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4616,7 +4616,8 @@ ORDER BY NomDiscipline</property>
                       dataType="wstr"
                       length="50"
                       lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[etablissement]"
-                      name="etablissement">
+                      name="etablissement"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -4630,8 +4631,7 @@ ORDER BY NomDiscipline</property>
                       dataType="wstr"
                       length="50"
                       lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[academie]"
-                      name="academie"
-                      sortKeyPosition="1">
+                      name="academie">
                       <properties>
                         <property
                           containsID="true"
@@ -4711,20 +4711,6 @@ ORDER BY NomDiscipline</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[poids_de_la_discipline]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[poids_de_la_discipline]"
-                      name="poids_de_la_discipline">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
-                          name="SortColumnId">#{Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[taux_dinsertion]"
                       dataType="wstr"
                       length="50"
@@ -4767,6 +4753,20 @@ ORDER BY NomDiscipline</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[poids_de_la_discipline]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[poids_de_la_discipline]"
+                      name="poids_de_la_discipline">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[Date]"
                       dataType="dbTimeStamp"
                       lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[Date]"
@@ -4800,7 +4800,7 @@ ORDER BY NomDiscipline</property>
                 <property
                   dataType="System.String"
                   description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
-                  name="OpenRowset">[dbo].[DimLieux]</property>
+                  name="OpenRowset"></property>
                 <property
                   dataType="System.String"
                   description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
@@ -4811,7 +4811,7 @@ ORDER BY NomDiscipline</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  *
 FROM DimLieux
-ORDER BY NomAcademie</property>
+ORDER BY NomEtablissement</property>
                 <property
                   dataType="System.String"
                   description="Variable contenant la commande SQL à exécuter."
@@ -4866,6 +4866,7 @@ ORDER BY NomAcademie</property>
                       length="50"
                       lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomEtablissement]"
                       name="NomEtablissement"
+                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomAcademie]"
@@ -4876,7 +4877,6 @@ ORDER BY NomAcademie</property>
                       length="50"
                       lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomAcademie]"
                       name="NomAcademie"
-                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -5544,12 +5544,12 @@ ORDER BY NomAcademie</property>
               name="Create"
               startId="Package\Integration Dimensions\C_U_Diplomes.Outputs[Create]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Create3]"
+              refId="Package\Integration Dimensions.Paths[Create2]"
               endId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB]"
               name="Create"
               startId="Package\Integration Dimensions\C_U_Temps.Outputs[Create]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Create2]"
+              refId="Package\Integration Dimensions.Paths[Create3]"
               endId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB]"
               name="Create"
               startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Create]" />
@@ -5564,35 +5564,35 @@ ORDER BY NomAcademie</property>
               name="Sortie de colonne dérivée"
               startId="Package\Integration Dimensions\Horodatage.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion1]"
+              refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
               endId="Package\Integration Dimensions\C_U_Diplomes.Inputs[Entrée de fractionnement conditionnel]"
               name="Sortie de jointure de fusion"
               startId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
+              refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion1]"
               endId="Package\Integration Dimensions\C_U_Temps.Inputs[Entrée de fractionnement conditionnel]"
               name="Sortie de jointure de fusion"
               startId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion2]"
-              endId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel]"
-              name="Sortie de jointure de fusion"
-              startId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
               endId="Package\Integration Dimensions\C_U_Disciplines.Inputs[Entrée de fractionnement conditionnel]"
               name="Sortie de jointure de fusion"
               startId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
+              endId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel]"
+              name="Sortie de jointure de fusion"
+              startId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de multidiffusion 1]"
               endId="Package\Integration Dimensions\TriDiplomes.Inputs[Entrée de tri]"
               name="Sortie de multidiffusion 1"
               startId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 1]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de multidiffusion 2]"
+              refId="Package\Integration Dimensions.Paths[Sortie de multidiffusion 3]"
               endId="Package\Integration Dimensions\TriLieux.Inputs[Entrée de tri]"
-              name="Sortie de multidiffusion 2"
-              startId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 2]" />
+              name="Sortie de multidiffusion 3"
+              startId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 3]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de multidiffusion 4]"
               endId="Package\Integration Dimensions\TriTemps.Inputs[Entrée de tri]"
@@ -5604,15 +5604,10 @@ ORDER BY NomAcademie</property>
               name="Sortie de source de fichier plat"
               startId="Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
+              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
               endId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion]"
               name="Sortie de source OLE DB"
               startId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
-              endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée droite de jointure de fusion]"
-              name="Sortie de source OLE DB"
-              startId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB1]"
               endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée droite de jointure de fusion]"
@@ -5624,12 +5619,22 @@ ORDER BY NomAcademie</property>
               name="Sortie de source OLE DB"
               startId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri3]"
+              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
+              endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée droite de jointure de fusion]"
+              name="Sortie de source OLE DB"
+              startId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Sortie de tri2]"
+              endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion]"
+              name="Sortie de tri"
+              startId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Sortie de tri]"
               endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriTemps.Outputs[Sortie de tri]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri2]"
+              refId="Package\Integration Dimensions.Paths[Sortie de tri3]"
               endId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri]" />
@@ -5638,16 +5643,6 @@ ORDER BY NomAcademie</property>
               endId="Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriDisciplines.Outputs[Sortie de tri]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri]"
-              endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion]"
-              name="Sortie de tri"
-              startId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Update2]"
-              endId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB]"
-              name="Update"
-              startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Update]" />
             <path
               refId="Package\Integration Dimensions.Paths[Update]"
               endId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB]"
@@ -5659,10 +5654,15 @@ ORDER BY NomAcademie</property>
               name="Update"
               startId="Package\Integration Dimensions\C_U_Diplomes.Outputs[Update]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Update3]"
+              refId="Package\Integration Dimensions.Paths[Update2]"
               endId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB]"
               name="Update"
               startId="Package\Integration Dimensions\C_U_Temps.Outputs[Update]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Update3]"
+              endId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB]"
+              name="Update"
+              startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Update]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5712,81 +5712,161 @@ ORDER BY NomAcademie</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="135,42"
-          Id="Package\Integration Dimensions\CompLieux"
-          TopLeft="1053,379" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Integration Dimensions\C_U_Lieux"
-          TopLeft="1058,458" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Integration Dimensions\TriDisciplines"
-          TopLeft="154.613088326351,292.614031874876" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Integration Dimensions\TriLieuxCourants"
-          TopLeft="1151,292" />
-        <NodeLayout
-          Size="125,43"
-          Id="Package\Integration Dimensions\TriLieux"
-          TopLeft="1005.66664356987,291.942354072416" />
-        <NodeLayout
-          Size="102,42"
-          Id="Package\Integration Dimensions\CSV"
-          TopLeft="865.999985896051,6.86842100780427" />
-        <NodeLayout
           Size="147,42"
           Id="Package\Integration Dimensions\Maj Discipline"
           TopLeft="327,574" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\Integration Dimensions\TriDiplomesCourants"
-          TopLeft="751,293" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Integration Dimensions\CompDisciplines"
-          TopLeft="230,377" />
-        <NodeLayout
-          Size="195,42"
-          Id="Package\Integration Dimensions\TriDisciplinesCourantes"
-          TopLeft="323,293" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Integration Dimensions\C_U_Disciplines"
-          TopLeft="231.32407267709,457.452239111068" />
+          Size="126,42"
+          Id="Package\Integration Dimensions\TriTemps"
+          TopLeft="1405,293" />
         <NodeLayout
           Size="151,42"
           Id="Package\Integration Dimensions\New Discipline"
           TopLeft="152,574" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\Integration Dimensions\C_U_Diplomes"
-          TopLeft="664,457" />
+          Size="160,42"
+          Id="Package\Integration Dimensions\C_U_Disciplines"
+          TopLeft="231.32407267709,457.452239111068" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Integration Dimensions\Maj Diplome"
+          TopLeft="740,572" />
         <NodeLayout
           Size="170,42"
           Id="Package\Integration Dimensions\TriTempsCourants"
           TopLeft="1551,293" />
         <NodeLayout
-          Size="143,43"
-          Id="Package\Integration Dimensions\Multidiffusion"
-          TopLeft="847.553555131757,148.496239552974" />
+          Size="102,42"
+          Id="Package\Integration Dimensions\CSV"
+          TopLeft="865.999985896051,6.86842100780427" />
         <NodeLayout
-          Size="136,43"
-          Id="Package\Integration Dimensions\Horodatage"
-          TopLeft="851.749983515591,78.3157886247721" />
+          Size="145,42"
+          Id="Package\Integration Dimensions\TriDisciplines"
+          TopLeft="154.613088326351,292.614031874876" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Integration Dimensions\New Diplome"
+          TopLeft="578,572" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Integration Dimensions\C_U_Diplomes"
+          TopLeft="664,457" />
         <NodeLayout
           Size="138,42"
           Id="Package\Integration Dimensions\TriDiplomes"
           TopLeft="592.267842155216,293.268168367283" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Integration Dimensions\CompDiplomes"
-          TopLeft="662,378" />
+          Size="143,43"
+          Id="Package\Integration Dimensions\Multidiffusion"
+          TopLeft="847.553555131757,148.496239552974" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Integration Dimensions\TriDisciplinesCourantes"
+          TopLeft="323,293" />
+        <NodeLayout
+          Size="136,43"
+          Id="Package\Integration Dimensions\Horodatage"
+          TopLeft="851.749983515591,78.3157886247721" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Integration Dimensions\TriDiplomesCourants"
+          TopLeft="751,293" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Integration Dimensions\Maj Temps"
+          TopLeft="1557,565" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Integration Dimensions\New Temps"
+          TopLeft="1392,565" />
         <NodeLayout
           Size="141,42"
           Id="Package\Integration Dimensions\C_U_Temps"
           TopLeft="1467,458" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Integration Dimensions\CompDisciplines"
+          TopLeft="230,377" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Integration Dimensions\Jointure de fusion"
+          TopLeft="1457,375" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Integration Dimensions\CompDiplomes"
+          TopLeft="662,378" />
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Update2]"
+          TopLeft="1559.66666666667,500">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.8333333333333,65"
+              Start="0,0"
+              End="63.8333333333333,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.437587657784" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.437587657784"
+                    Point2="0,26.437587657784"
+                    Point3="4,26.437587657784" />
+                  <mssgle:LineSegment
+                    End="59.8333333333333,26.437587657784" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.8333333333333,26.437587657784"
+                    Point2="63.8333333333333,26.437587657784"
+                    Point3="63.8333333333333,30.437587657784" />
+                  <mssgle:LineSegment
+                    End="63.8333333333333,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.6363736979166,31.437587657784,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Update1]"
+          TopLeft="764.666666666667,499">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.8333333333334,73"
+              Start="0,0"
+              End="64.8333333333334,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.6532988357051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.6532988357051"
+                    Point2="0,29.6532988357051"
+                    Point3="4,29.6532988357051" />
+                  <mssgle:LineSegment
+                    End="60.8333333333334,29.6532988357051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60.8333333333334,29.6532988357051"
+                    Point2="64.8333333333334,29.6532988357051"
+                    Point3="64.8333333333334,33.6532988357051" />
+                  <mssgle:LineSegment
+                    End="64.8333333333334,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.1363736979167,34.6532988357051,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update]"
           TopLeft="336.657406010423,499.452239111068">
@@ -5825,30 +5905,30 @@ ORDER BY NomAcademie</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri2]"
-          TopLeft="1068.16664356987,334.942354072416">
+          TopLeft="661.267842155216,335.268168367283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31.1666897634634,44.057645927584"
+              EndConnector="53.3988245114506,42.731831632717"
               Start="0,0"
-              End="31.1666897634634,36.557645927584">
+              End="53.3988245114506,35.231831632717">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.1249584197241" />
+                    End="0,21.375457859017" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.1249584197241"
-                    Point2="0,26.1249584197241"
-                    Point3="4,26.1249584197241" />
+                    Point1="0,21.375457859017"
+                    Point2="0,25.375457859017"
+                    Point3="4,25.375457859017" />
                   <mssgle:LineSegment
-                    End="27.1666897634634,26.1249584197241" />
+                    End="49.3988245114506,25.375457859017" />
                   <mssgle:CubicBezierSegment
-                    Point1="27.1666897634634,26.1249584197241"
-                    Point2="31.1666897634634,26.1249584197241"
-                    Point3="31.1666897634634,30.1249584197241" />
+                    Point1="49.3988245114506,25.375457859017"
+                    Point2="53.3988245114506,25.375457859017"
+                    Point3="53.3988245114506,29.375457859017" />
                   <mssgle:LineSegment
-                    End="31.1666897634634,36.557645927584" />
+                    End="53.3988245114506,35.231831632717" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5893,30 +5973,30 @@ ORDER BY NomAcademie</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri]"
-          TopLeft="661.267842155216,335.268168367283">
+          TopLeft="1468,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="53.3988245114506,42.731831632717"
+              EndConnector="45.6666666666667,40"
               Start="0,0"
-              End="53.3988245114506,35.231831632717">
+              End="45.6666666666667,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.375457859017" />
+                    End="0,19.7708830548926" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.375457859017"
-                    Point2="0,25.375457859017"
-                    Point3="4,25.375457859017" />
+                    Point1="0,19.7708830548926"
+                    Point2="0,23.7708830548926"
+                    Point3="4,23.7708830548926" />
                   <mssgle:LineSegment
-                    End="49.3988245114506,25.375457859017" />
+                    End="41.6666666666667,23.7708830548926" />
                   <mssgle:CubicBezierSegment
-                    Point1="49.3988245114506,25.375457859017"
-                    Point2="53.3988245114506,25.375457859017"
-                    Point3="53.3988245114506,29.375457859017" />
+                    Point1="41.6666666666667,23.7708830548926"
+                    Point2="45.6666666666667,23.7708830548926"
+                    Point3="45.6666666666667,27.7708830548926" />
                   <mssgle:LineSegment
-                    End="53.3988245114506,35.231831632717" />
+                    End="45.6666666666667,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5995,30 +6075,30 @@ ORDER BY NomAcademie</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
-          TopLeft="1232.5,334">
+          TopLeft="1636,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-90.8333333333333,45"
+              EndConnector="-69.6666666666667,40"
               Start="0,0"
-              End="-90.8333333333333,37.5">
+              End="-69.6666666666667,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.683748169839" />
+                    End="0,19.7708830548926" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.683748169839"
-                    Point2="0,26.683748169839"
-                    Point3="-4,26.683748169839" />
+                    Point1="0,19.7708830548926"
+                    Point2="0,23.7708830548926"
+                    Point3="-4,23.7708830548926" />
                   <mssgle:LineSegment
-                    End="-86.8333333333333,26.683748169839" />
+                    End="-65.6666666666667,23.7708830548926" />
                   <mssgle:CubicBezierSegment
-                    Point1="-86.8333333333333,26.683748169839"
-                    Point2="-90.8333333333333,26.683748169839"
-                    Point3="-90.8333333333333,30.683748169839" />
+                    Point1="-65.6666666666667,23.7708830548926"
+                    Point2="-69.6666666666667,23.7708830548926"
+                    Point3="-69.6666666666667,27.7708830548926" />
                   <mssgle:LineSegment
-                    End="-90.8333333333333,37.5" />
+                    End="-69.6666666666667,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6050,31 +6130,31 @@ ORDER BY NomAcademie</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 2]"
-          TopLeft="932.553555131757,191.496239552974">
+          Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 4]"
+          TopLeft="959.553555131757,191.496239552974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="135.613088438111,100.446114519442"
+              EndConnector="508.446444868243,101.503760447026"
               Start="0,0"
-              End="135.613088438111,92.946114519442">
+              End="508.446444868243,94.003760447026">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.9874489739586" />
+                    End="0,26.6986982815396" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,40.9874489739586"
-                    Point2="0,44.9874489739586"
-                    Point3="4,44.9874489739586" />
+                    Point1="0,26.6986982815396"
+                    Point2="0,30.6986982815396"
+                    Point3="4,30.6986982815396" />
                   <mssgle:LineSegment
-                    End="131.613088438111,44.9874489739586" />
+                    End="504.446444868243,30.6986982815396" />
                   <mssgle:CubicBezierSegment
-                    Point1="131.613088438111,44.9874489739586"
-                    Point2="135.613088438111,44.9874489739586"
-                    Point3="135.613088438111,48.9874489739586" />
+                    Point1="504.446444868243,30.6986982815396"
+                    Point2="508.446444868243,30.6986982815396"
+                    Point3="508.446444868243,34.6986982815396" />
                   <mssgle:LineSegment
-                    End="135.613088438111,92.946114519442" />
+                    End="508.446444868243,94.003760447026" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6118,7 +6198,7 @@ ORDER BY NomAcademie</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
+          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion2]"
           TopLeft="310.912036338545,419">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6131,6 +6211,50 @@ ORDER BY NomAcademie</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,30.952239111068" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion1]"
+          TopLeft="1538.75,417">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
+          TopLeft="739.75,420">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6196,105 +6320,41 @@ ORDER BY NomAcademie</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Create]"
-          TopLeft="285.990739343757,499.452239111068">
+          Id="Package\Integration Dimensions.Paths[Create2]"
+          TopLeft="1537.5,500">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-58.4907393437567,74.547760888932"
+              EndConnector="-76.5,65"
               Start="0,0"
-              End="-58.4907393437567,67.047760888932">
+              End="-76.5,57.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.2619623410516" />
+                    End="0,28.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.2619623410516"
-                    Point2="0,30.2619623410516"
-                    Point3="-4,30.2619623410516" />
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="-4,32.5" />
                   <mssgle:LineSegment
-                    End="-54.4907393437567,30.2619623410516" />
+                    End="-72.5,32.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-54.4907393437567,30.2619623410516"
-                    Point2="-58.4907393437567,30.2619623410516"
-                    Point3="-58.4907393437567,34.2619623410516" />
+                    Point1="-72.5,32.5"
+                    Point2="-76.5,32.5"
+                    Point3="-76.5,36.5" />
                   <mssgle:LineSegment
-                    End="-58.4907393437567,67.047760888932" />
+                    End="-76.5,57.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-44.3142368593783,35.2619623410516,30.137734375,9.5537109375"
+              BoundingBox="-53.3188671875,37.5,30.137734375,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="126,42"
-          Id="Package\Integration Dimensions\TriTemps"
-          TopLeft="1405,293" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 4]"
-          TopLeft="959.553555131757,191.496239552974">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="508.446444868243,101.503760447026"
-              Start="0,0"
-              End="508.446444868243,94.003760447026">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.6986982815396" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.6986982815396"
-                    Point2="0,30.6986982815396"
-                    Point3="4,30.6986982815396" />
-                  <mssgle:LineSegment
-                    End="504.446444868243,30.6986982815396" />
-                  <mssgle:CubicBezierSegment
-                    Point1="504.446444868243,30.6986982815396"
-                    Point2="508.446444868243,30.6986982815396"
-                    Point3="508.446444868243,34.6986982815396" />
-                  <mssgle:LineSegment
-                    End="508.446444868243,94.003760447026" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion1]"
-          TopLeft="739.75,420">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Integration Dimensions\New Diplome"
-          TopLeft="578,572" />
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Create1]"
           TopLeft="716.333333333333,499">
@@ -6331,60 +6391,174 @@ ORDER BY NomAcademie</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Integration Dimensions\Maj Diplome"
-          TopLeft="740,572" />
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Update1]"
-          TopLeft="764.666666666667,499">
+          Id="Package\Integration Dimensions.Paths[Create]"
+          TopLeft="285.990739343757,499.452239111068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64.8333333333334,73"
+              EndConnector="-58.4907393437567,74.547760888932"
               Start="0,0"
-              End="64.8333333333334,65.5">
+              End="-58.4907393437567,67.047760888932">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6532988357051" />
+                    End="0,26.2619623410516" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.6532988357051"
-                    Point2="0,29.6532988357051"
-                    Point3="4,29.6532988357051" />
+                    Point1="0,26.2619623410516"
+                    Point2="0,30.2619623410516"
+                    Point3="-4,30.2619623410516" />
                   <mssgle:LineSegment
-                    End="60.8333333333334,29.6532988357051" />
+                    End="-54.4907393437567,30.2619623410516" />
                   <mssgle:CubicBezierSegment
-                    Point1="60.8333333333334,29.6532988357051"
-                    Point2="64.8333333333334,29.6532988357051"
-                    Point3="64.8333333333334,33.6532988357051" />
+                    Point1="-54.4907393437567,30.2619623410516"
+                    Point2="-58.4907393437567,30.2619623410516"
+                    Point3="-58.4907393437567,34.2619623410516" />
                   <mssgle:LineSegment
-                    End="64.8333333333334,65.5" />
+                    End="-58.4907393437567,67.047760888932" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="16.1363736979167,34.6532988357051,32.5605859375,11.609375"
+              BoundingBox="-44.3142368593783,35.2619623410516,30.137734375,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Integration Dimensions\TriLieuxCourants"
+          TopLeft="1154,295" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Integration Dimensions\TriLieux"
+          TopLeft="1014,294" />
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion2]"
-          TopLeft="1122.5,421">
+          Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 3]"
+          TopLeft="932.553555131757,191.496239552974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="140.446444868243,102.503760447026"
               Start="0,0"
-              End="0,29.5">
+              End="140.446444868243,95.003760447026">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,41.9090201229923" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.9090201229923"
+                    Point2="0,45.9090201229923"
+                    Point3="4,45.9090201229923" />
+                  <mssgle:LineSegment
+                    End="136.446444868243,45.9090201229923" />
+                  <mssgle:CubicBezierSegment
+                    Point1="136.446444868243,45.9090201229923"
+                    Point2="140.446444868243,45.9090201229923"
+                    Point3="140.446444868243,49.9090201229923" />
+                  <mssgle:LineSegment
+                    End="140.446444868243,95.003760447026" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Integration Dimensions\CompLieux"
+          TopLeft="1075,379" />
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de tri3]"
+          TopLeft="1073,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.3333333333333,43"
+              Start="0,0"
+              End="48.3333333333333,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.497803806735" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.497803806735"
+                    Point2="0,25.497803806735"
+                    Point3="4,25.497803806735" />
+                  <mssgle:LineSegment
+                    End="44.3333333333333,25.497803806735" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.3333333333333,25.497803806735"
+                    Point2="48.3333333333333,25.497803806735"
+                    Point3="48.3333333333333,29.497803806735" />
+                  <mssgle:LineSegment
+                    End="48.3333333333333,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
+          TopLeft="1235.5,337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.8333333333333,42"
+              Start="0,0"
+              End="-71.8333333333333,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.904831625183" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.904831625183"
+                    Point2="0,24.904831625183"
+                    Point3="-4,24.904831625183" />
+                  <mssgle:LineSegment
+                    End="-67.8333333333333,24.904831625183" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.8333333333333,24.904831625183"
+                    Point2="-71.8333333333333,24.904831625183"
+                    Point3="-71.8333333333333,28.904831625183" />
+                  <mssgle:LineSegment
+                    End="-71.8333333333333,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Integration Dimensions\C_U_Lieux"
+          TopLeft="1075,459" />
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
+          TopLeft="1142,421">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6396,294 +6570,86 @@ ORDER BY NomAcademie</property>
         <NodeLayout
           Size="125,42"
           Id="Package\Integration Dimensions\New Lieu"
-          TopLeft="995,569" />
+          TopLeft="1003,572" />
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Create2]"
-          TopLeft="1103.66666666667,500">
+          Id="Package\Integration Dimensions.Paths[Create3]"
+          TopLeft="1120.66666666667,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-46.1666666666667,69"
+              EndConnector="-55.1666666666667,71"
               Start="0,0"
-              End="-46.1666666666667,61.5">
+              End="-55.1666666666667,63.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.0921248142645" />
+                    End="0,24.9063893016345" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.0921248142645"
-                    Point2="0,28.0921248142645"
-                    Point3="-4,28.0921248142645" />
+                    Point1="0,24.9063893016345"
+                    Point2="0,28.9063893016345"
+                    Point3="-4,28.9063893016345" />
                   <mssgle:LineSegment
-                    End="-42.1666666666667,28.0921248142645" />
+                    End="-51.1666666666667,28.9063893016345" />
                   <mssgle:CubicBezierSegment
-                    Point1="-42.1666666666667,28.0921248142645"
-                    Point2="-46.1666666666667,28.0921248142645"
-                    Point3="-46.1666666666667,32.0921248142645" />
+                    Point1="-51.1666666666667,28.9063893016345"
+                    Point2="-55.1666666666667,28.9063893016345"
+                    Point3="-55.1666666666667,32.9063893016345" />
                   <mssgle:LineSegment
-                    End="-46.1666666666667,61.5" />
+                    End="-55.1666666666667,63.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-38.1522005208334,33.0921248142645,30.137734375,9.5537109375"
+              BoundingBox="-42.6522005208334,33.9063893016345,30.137734375,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="121,42"
           Id="Package\Integration Dimensions\Maj Lieu"
-          TopLeft="1139,568" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Update2]"
-          TopLeft="1145.33333333333,500">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54.1666666666667,68"
-              Start="0,0"
-              End="54.1666666666667,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.6849925705795" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.6849925705795"
-                    Point2="0,27.6849925705795"
-                    Point3="4,27.6849925705795" />
-                  <mssgle:LineSegment
-                    End="50.1666666666667,27.6849925705795" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.1666666666667,27.6849925705795"
-                    Point2="54.1666666666667,27.6849925705795"
-                    Point3="54.1666666666667,31.6849925705795" />
-                  <mssgle:LineSegment
-                    End="54.1666666666667,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="10.8030403645834,32.6849925705795,32.5605859375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Integration Dimensions\Jointure de fusion"
-          TopLeft="1457,375" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de tri3]"
-          TopLeft="1468,335">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="45.6666666666667,40"
-              Start="0,0"
-              End="45.6666666666667,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.7708830548926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.7708830548926"
-                    Point2="0,23.7708830548926"
-                    Point3="4,23.7708830548926" />
-                  <mssgle:LineSegment
-                    End="41.6666666666667,23.7708830548926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.6666666666667,23.7708830548926"
-                    Point2="45.6666666666667,23.7708830548926"
-                    Point3="45.6666666666667,27.7708830548926" />
-                  <mssgle:LineSegment
-                    End="45.6666666666667,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
-          TopLeft="1636,335">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-69.6666666666667,40"
-              Start="0,0"
-              End="-69.6666666666667,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.7708830548926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.7708830548926"
-                    Point2="0,23.7708830548926"
-                    Point3="-4,23.7708830548926" />
-                  <mssgle:LineSegment
-                    End="-65.6666666666667,23.7708830548926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-65.6666666666667,23.7708830548926"
-                    Point2="-69.6666666666667,23.7708830548926"
-                    Point3="-69.6666666666667,27.7708830548926" />
-                  <mssgle:LineSegment
-                    End="-69.6666666666667,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
-          TopLeft="1538.75,417">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Integration Dimensions\New Temps"
-          TopLeft="1392,565" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Create3]"
-          TopLeft="1537.5,500">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-76.5,65"
-              Start="0,0"
-              End="-76.5,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="-4,32.5" />
-                  <mssgle:LineSegment
-                    End="-72.5,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-72.5,32.5"
-                    Point2="-76.5,32.5"
-                    Point3="-76.5,36.5" />
-                  <mssgle:LineSegment
-                    End="-76.5,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-53.3188671875,37.5,30.137734375,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Integration Dimensions\Maj Temps"
-          TopLeft="1557,565" />
+          TopLeft="1150,572" />
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update3]"
-          TopLeft="1559.66666666667,500">
+          TopLeft="1162.33333333333,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.8333333333333,65"
+              EndConnector="48.1666666666667,71"
               Start="0,0"
-              End="63.8333333333333,57.5">
+              End="48.1666666666667,63.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.437587657784" />
+                    End="0,24.9063893016345" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.437587657784"
-                    Point2="0,26.437587657784"
-                    Point3="4,26.437587657784" />
+                    Point1="0,24.9063893016345"
+                    Point2="0,28.9063893016345"
+                    Point3="4,28.9063893016345" />
                   <mssgle:LineSegment
-                    End="59.8333333333333,26.437587657784" />
+                    End="44.1666666666667,28.9063893016345" />
                   <mssgle:CubicBezierSegment
-                    Point1="59.8333333333333,26.437587657784"
-                    Point2="63.8333333333333,26.437587657784"
-                    Point3="63.8333333333333,30.437587657784" />
+                    Point1="44.1666666666667,28.9063893016345"
+                    Point2="48.1666666666667,28.9063893016345"
+                    Point3="48.1666666666667,32.9063893016345" />
                   <mssgle:LineSegment
-                    End="63.8333333333333,57.5" />
+                    End="48.1666666666667,63.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.6363736979166,31.437587657784,32.5605859375,11.609375"
+              BoundingBox="7.80304036458337,33.9063893016345,32.5605859375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriLieuxCourants">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriDiplomesCourants">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriDisciplinesCourantes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\New Discipline">
     <Properties>
@@ -6724,7 +6690,15 @@ ORDER BY NomAcademie</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\New Lieu">
+    design-time-name="Package\Integration Dimensions\TriDisciplinesCourantes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Dimensions\TriDiplomesCourants">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6738,6 +6712,27 @@ ORDER BY NomAcademie</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\New Temps">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Dimensions\TriLieuxCourants">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Dimensions\New Lieu">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="112"
-  DTS:VersionGUID="{CF60A9FB-88EB-4CA0-8616-C6A8EA1D3031}">
+  DTS:VersionBuild="149"
+  DTS:VersionGUID="{F3770893-24A4-4742-B731-2A194B6F70A8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5679,7 +5679,1790 @@ ORDER BY NomEtablissement</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1" />
+          version="1">
+          <components>
+            <component
+              refId="Package\Integration Fait\CAST INT"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="CAST INT"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre_de_reponses"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[taux_de_reponse]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_de_reponse"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[taux_dinsertion]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_dinsertion"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="salaire_brut_annuel_estime"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]"
+                      name="NombreReponsesCAST(INT)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)nombre_de_reponses</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]"
+                      name="TauxInsertionCAST(INT)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)taux_dinsertion</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      name="SalaireBrutAnnuelEstimeCAST(INT)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)salaire_brut_annuel_estime</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]"
+                      name="TauxReponsesCAST(INT)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)taux_de_reponse</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\New Fact"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="New Fact"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[FactInsertionProfessionnelleMaster]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\New Fact.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Connexion de données]"
+                  connectionManagerRefId="Package.ConnectionManagers[Connexion de données]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[idDiscipline]"
+                      cachedDataType="i4"
+                      cachedName="idDiscipline"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdDiscipline]"
+                      lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance].Columns[idDiscipline]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[idDiplome]"
+                      cachedDataType="i4"
+                      cachedName="idDiplome"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdDiplome]"
+                      lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance].Columns[idDiplome]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[idLieu]"
+                      cachedDataType="i4"
+                      cachedName="idLieu"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdLieu]"
+                      lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance].Columns[idLieu]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[IdTemps]"
+                      cachedDataType="i4"
+                      cachedName="IdTemps"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdTemps]"
+                      lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[SituationMois]"
+                      cachedDataType="i4"
+                      cachedName="SituationMois"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SituationMois]"
+                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[NombreReponsesCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="NombreReponsesCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[NombreReponses]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[TauxInsertionCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="TauxInsertionCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxInsertion]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="SalaireBrutAnnuelEstimeCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SalaireBrutAnnuelEstime]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[TauxReponsesCAST(INT)]"
+                      cachedDataType="i4"
+                      cachedName="TauxReponsesCAST(INT)"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxReponses]"
+                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdDiplome]"
+                      dataType="i4"
+                      name="IdDiplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdLieu]"
+                      dataType="i4"
+                      name="IdLieu" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdTemps]"
+                      dataType="i4"
+                      name="IdTemps" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdDiscipline]"
+                      dataType="i4"
+                      name="IdDiscipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SituationMois]"
+                      dataType="i4"
+                      name="SituationMois" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[NombreReponses]"
+                      dataType="i4"
+                      name="NombreReponses" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxReponses]"
+                      dataType="i4"
+                      name="TauxReponses" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxInsertion]"
+                      dataType="i4"
+                      name="TauxInsertion" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SalaireBrutAnnuelEstime]"
+                      dataType="i4"
+                      name="SalaireBrutAnnuelEstime" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\RechercheDiplome"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
+              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
+              name="RechercheDiplome"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  idDiplome, TRIM(NomDiplome) AS NomDiplomeW FROM DimDiplomes;</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT  idDiplome, TRIM(NomDiplome) AS NomDiplomeW FROM DimDiplomes;) [refTable]
+where [refTable].[NomDiplomeW] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de cache de la table de correspondance."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indique si les métadonnées sont à référencer en format XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="idDiplome" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NomDiplomeW" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
+                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\RechercheDiplome.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Connexion de données]"
+                  connectionManagerRefId="Package.ConnectionManagers[Connexion de données]"
+                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche]"
+                  name="Entrée de recherche">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche].Columns[diplome]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="diplome"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">NomDiplomeW</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance]"
+                  errorOrTruncationOperation="Recherche"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Sortie de recherche avec correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance].Columns[idDiplome]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance].Columns[idDiplome]"
+                      name="idDiplome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">idDiplome</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche sans correspondance]"
+                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
+                  exclusionGroup="1"
+                  name="Sortie de recherche sans correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie d'erreur de recherche]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de recherche"
+                  synchronousInputId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\RechercheDiscipline"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
+              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
+              name="RechercheDiscipline"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  idDiscipline, TRIM(NomDiscipline) AS NomDisciplineW FROM DimDisciplines;</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT  idDiscipline, TRIM(NomDiscipline) AS NomDisciplineW FROM DimDisciplines;) [refTable]
+where [refTable].[NomDisciplineW] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de cache de la table de correspondance."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indique si les métadonnées sont à référencer en format XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="idDiscipline" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NomDisciplineW" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
+                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\RechercheDiscipline.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Connexion de données]"
+                  connectionManagerRefId="Package.ConnectionManagers[Connexion de données]"
+                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]"
+                  name="Entrée de recherche">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche].Columns[discipline]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="discipline"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">NomDisciplineW</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance]"
+                  errorOrTruncationOperation="Recherche"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Sortie de recherche avec correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance].Columns[idDiscipline]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance].Columns[idDiscipline]"
+                      name="idDiscipline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">idDiscipline</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche sans correspondance]"
+                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
+                  exclusionGroup="1"
+                  name="Sortie de recherche sans correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie d'erreur de recherche]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de recherche"
+                  synchronousInputId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\RechercheLieux"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
+              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
+              name="RechercheLieux"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  idLieu, TRIM(NomEtablissement) AS NomEtablissementW FROM DimLieux;</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT  idLieu, TRIM(NomEtablissement) AS NomEtablissementW FROM DimLieux;) [refTable]
+where [refTable].[NomEtablissementW] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de cache de la table de correspondance."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indique si les métadonnées sont à référencer en format XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="idLieu" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NomEtablissementW" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
+                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\RechercheLieux.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Connexion de données]"
+                  connectionManagerRefId="Package.ConnectionManagers[Connexion de données]"
+                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\RechercheLieux.Inputs[Entrée de recherche]"
+                  name="Entrée de recherche">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\RechercheLieux.Inputs[Entrée de recherche].Columns[etablissement]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="etablissement"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">NomEtablissementW</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance]"
+                  errorOrTruncationOperation="Recherche"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Sortie de recherche avec correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheLieux.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance].Columns[idLieu]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance].Columns[idLieu]"
+                      name="idLieu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">idLieu</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche sans correspondance]"
+                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
+                  exclusionGroup="1"
+                  name="Sortie de recherche sans correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheLieux.Inputs[Entrée de recherche]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheLieux.Outputs[Sortie d'erreur de recherche]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de recherche"
+                  synchronousInputId="Package\Integration Fait\RechercheLieux.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheLieux.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheLieux.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\RechercheTemps"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
+              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
+              name="RechercheTemps"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimTemps]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimTemps]) [refTable]
+where [refTable].[AnneeTemps] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de cache de la table de correspondance."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indique si les métadonnées sont à référencer en format XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IdTemps" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AnneeTemps" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
+                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\RechercheTemps.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Connexion de données]"
+                  connectionManagerRefId="Package.ConnectionManagers[Connexion de données]"
+                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche]"
+                  name="Entrée de recherche">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche].Columns[annee]"
+                      cachedDataType="i4"
+                      cachedName="annee"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">AnneeTemps</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance]"
+                  errorOrTruncationOperation="Recherche"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Sortie de recherche avec correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]"
+                      name="IdTemps"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">IdTemps</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche sans correspondance]"
+                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
+                  exclusionGroup="1"
+                  name="Sortie de recherche sans correspondance"
+                  synchronousInputId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\RechercheTemps.Outputs[Sortie d'erreur de recherche]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de recherche"
+                  synchronousInputId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheTemps.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\RechercheTemps.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[taux_dinsertion]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_dinsertion"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? "NULL" : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(taux_dinsertion == "ns" || taux_dinsertion == "nd" || TRIM(taux_dinsertion) == "") ? "NULL" : taux_dinsertion</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[situation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="situation"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="salaire_brut_annuel_estime"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "") ? "NULL" : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(salaire_brut_annuel_estime == "ns" || salaire_brut_annuel_estime == "nd" || TRIM(salaire_brut_annuel_estime) == "") ? "NULL" : salaire_brut_annuel_estime</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre_de_reponses"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? "NULL" : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(nombre_de_reponses) == "" ? "NULL" : nombre_de_reponses</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]"
+                      name="SituationMois"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_I4)[SUBSTRING](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)SUBSTRING(situation,1,2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\Source du fichier plat"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source du fichier plat"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\Source du fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[insert_pro]"
+                  connectionManagerRefId="Package.ConnectionManagers[insert_pro]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[annee]"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]"
+                      name="annee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[diplome]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]"
+                      name="diplome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissement]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]"
+                      name="etablissement"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[academie]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[academie]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[academie]"
+                      name="academie"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[domaine]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[domaine]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[domaine]"
+                      name="domaine"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[discipline]"
+                      length="100"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]"
+                      name="discipline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_reponse]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      name="taux_de_reponse"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_dinsertion]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      name="taux_dinsertion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]"
+                      name="taux_d_emploi"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      name="salaire_brut_annuel_estime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[situation]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]"
+                      name="situation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      name="nombre_de_reponses"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      length="50"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]"
+                      name="poids_de_la_discipline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[annee]"
+                      dataType="i4"
+                      name="annee" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[diplome]"
+                      dataType="wstr"
+                      length="50"
+                      name="diplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[numero_de_l_etablissement]"
+                      dataType="wstr"
+                      length="50"
+                      name="numero_de_l_etablissement" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissement]"
+                      dataType="wstr"
+                      length="50"
+                      name="etablissement" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissementactuel]"
+                      dataType="wstr"
+                      length="50"
+                      name="etablissementactuel" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[code_de_l_academie]"
+                      dataType="wstr"
+                      length="50"
+                      name="code_de_l_academie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[academie]"
+                      dataType="wstr"
+                      length="50"
+                      name="academie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[code_du_domaine]"
+                      dataType="wstr"
+                      length="50"
+                      name="code_du_domaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[domaine]"
+                      dataType="wstr"
+                      length="50"
+                      name="domaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[code_de_la_discipline]"
+                      dataType="wstr"
+                      length="50"
+                      name="code_de_la_discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[discipline]"
+                      dataType="wstr"
+                      length="100"
+                      name="discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[situation]"
+                      dataType="wstr"
+                      length="50"
+                      name="situation" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[remarque]"
+                      dataType="wstr"
+                      length="50"
+                      name="remarque" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      dataType="wstr"
+                      length="50"
+                      name="nombre_de_reponses" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_reponse]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_de_reponse" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      dataType="wstr"
+                      length="50"
+                      name="poids_de_la_discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_dinsertion]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_dinsertion" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_d_emploi" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi_salarie_en_france]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_d_emploi_salarie_en_france" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_cadre_ou_professions_intermediaires]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_cadre_ou_professions_intermediaires" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_stables]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_stables" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_a_temps_plein]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_a_temps_plein" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_median_des_emplois_a_temps_plein]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_median_des_emplois_a_temps_plein" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_brut_annuel_estime" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[de_diplomes_boursiers]"
+                      dataType="wstr"
+                      length="50"
+                      name="de_diplomes_boursiers" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_chomage_regional]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_de_chomage_regional" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_median_regional]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_mensuel_median_regional" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_cadre]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_cadre" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_exterieurs_a_la_region_de_luniversite]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_exterieurs_a_la_region_de_luniversite" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[femmes]"
+                      dataType="wstr"
+                      length="50"
+                      name="femmes" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_regional_1er_quartile]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_mensuel_regional_1er_quartile" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_regional_3eme_quartile]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_mensuel_regional_3eme_quartile" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_etab]"
+                      dataType="wstr"
+                      length="50"
+                      name="cle_etab" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_disc]"
+                      dataType="wstr"
+                      length="50"
+                      name="cle_disc" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[id_paysage]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_paysage" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\TauxReponses"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="TauxReponses"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée].Columns[taux_de_reponse]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_de_reponse"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "NULL") ? #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(nombre_de_reponses == "0" || nombre_de_reponses == "NULL") ? nombre_de_reponses : taux_de_reponse</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre_de_reponses"
+                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\TauxReponses.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
+              endId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
+              endId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Integration Fait\TauxReponses.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
+              endId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de recherche avec correspondance1]"
+              endId="Package\Integration Fait\RechercheLieux.Inputs[Entrée de recherche]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de recherche avec correspondance2]"
+              endId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
+              endId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
+              endId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -6723,6 +8506,236 @@ ORDER BY NomEtablissement</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Integration Fait">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Integration Fait\RechercheDiscipline"
+          TopLeft="630.333333333333,190.333333333333" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Integration Fait\Source du fichier plat"
+          TopLeft="630.333333333333,118.333333333333" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
+          TopLeft="720.833333333333,160.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Integration Fait\RechercheDiplome"
+          TopLeft="634.333333333333,269.333333333333" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="720.583333333333,232.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.9453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Integration Fait\RechercheLieux"
+          TopLeft="640.833333333333,344" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="720.583333333333,311.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.6666666666667"
+              Start="0,0"
+              End="0,25.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,6.77864583333334,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Integration Fait\RechercheTemps"
+          TopLeft="639,423" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="721.166666666667,386">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.9999999999999"
+              Start="0,0"
+              End="0,29.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.94531249999997,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="441,42"
+          Id="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses"
+          TopLeft="499.666666666667,499.666666666666" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
+          TopLeft="721.083333333333,465">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.6666666666665"
+              Start="0,0"
+              End="0,27.1666666666665">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1666666666665" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,7.77864583333323,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Integration Fait\TauxReponses"
+          TopLeft="648.307692307692,572.653846153846" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
+          TopLeft="722.487179487179,541.666666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.9871794871797"
+              Start="0,0"
+              End="0,23.4871794871797">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.4871794871797" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,3.74358974358984,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Integration Fait\New Fact"
+          TopLeft="665,720" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Integration Fait\CAST INT"
+          TopLeft="655.833333333333,646.666666666667" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
+          TopLeft="722.570512820513,614.653846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.0128205128206"
+              Start="0,0"
+              End="0,24.5128205128206">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5128205128206" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
+          TopLeft="723.916666666667,688.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.3333333333335"
+              Start="0,0"
+              End="0,23.8333333333335">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8333333333335" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\TriLieuxCourants">
     <Properties>
@@ -6733,6 +8746,111 @@ ORDER BY NomEtablissement</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\New Lieu">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheDiscipline">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheDiplome">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheLieux">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheTemps">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTemps]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\New Fact">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

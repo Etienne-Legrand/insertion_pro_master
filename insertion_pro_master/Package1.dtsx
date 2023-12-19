@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="174"
-  DTS:VersionGUID="{67C47256-1C51-4265-BFDD-CC3C1F0E9D87}">
+  DTS:VersionBuild="175"
+  DTS:VersionGUID="{92467195-16CC-4933-8890-A10A38CDDF8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5923,25 +5923,25 @@ ORDER BY NomEtablissement</property>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="nombre_de_reponses"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
                     <inputColumn
                       refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[taux_de_reponse]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_de_reponse"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
                     <inputColumn
                       refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[taux_dinsertion]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_dinsertion"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
                     <inputColumn
                       refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="salaire_brut_annuel_estime"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5967,7 +5967,7 @@ ORDER BY NomEtablissement</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -5989,7 +5989,7 @@ ORDER BY NomEtablissement</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -6011,7 +6011,7 @@ ORDER BY NomEtablissement</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -6033,7 +6033,7 @@ ORDER BY NomEtablissement</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -6071,12 +6071,523 @@ ORDER BY NomEtablissement</property>
               </outputs>
             </component>
             <component
-              refId="Package\Integration Fait\Destination de fichier plat"
+              refId="Package\Integration Fait\CSV Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="CSV Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Integration Fait\CSV Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[insert_pro]"
+                  connectionManagerRefId="Package.ConnectionManagers[insert_pro]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[annee]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[annee]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[annee]"
+                      name="annee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[diplome]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[diplome]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[diplome]"
+                      name="diplome"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[etablissement]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissement]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[etablissement]"
+                      name="etablissement"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[academie]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[academie]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[academie]"
+                      name="academie"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[domaine]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[domaine]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[domaine]"
+                      name="domaine"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[discipline]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[discipline]"
+                      length="100"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[discipline]"
+                      name="discipline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_reponse]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      name="taux_de_reponse"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_dinsertion]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      name="taux_dinsertion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]"
+                      name="taux_d_emploi"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      name="salaire_brut_annuel_estime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[situation]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]"
+                      name="situation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      name="nombre_de_reponses"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      length="50"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]"
+                      name="poids_de_la_discipline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[annee]"
+                      dataType="i4"
+                      name="annee" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[diplome]"
+                      dataType="wstr"
+                      length="50"
+                      name="diplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[numero_de_l_etablissement]"
+                      dataType="wstr"
+                      length="50"
+                      name="numero_de_l_etablissement" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissement]"
+                      dataType="wstr"
+                      length="50"
+                      name="etablissement" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissementactuel]"
+                      dataType="wstr"
+                      length="50"
+                      name="etablissementactuel" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[code_de_l_academie]"
+                      dataType="wstr"
+                      length="50"
+                      name="code_de_l_academie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[academie]"
+                      dataType="wstr"
+                      length="50"
+                      name="academie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[code_du_domaine]"
+                      dataType="wstr"
+                      length="50"
+                      name="code_du_domaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[domaine]"
+                      dataType="wstr"
+                      length="50"
+                      name="domaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[code_de_la_discipline]"
+                      dataType="wstr"
+                      length="50"
+                      name="code_de_la_discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[discipline]"
+                      dataType="wstr"
+                      length="100"
+                      name="discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[situation]"
+                      dataType="wstr"
+                      length="50"
+                      name="situation" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[remarque]"
+                      dataType="wstr"
+                      length="50"
+                      name="remarque" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      dataType="wstr"
+                      length="50"
+                      name="nombre_de_reponses" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_reponse]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_de_reponse" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      dataType="wstr"
+                      length="50"
+                      name="poids_de_la_discipline" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_dinsertion]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_dinsertion" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_d_emploi" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi_salarie_en_france]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_d_emploi_salarie_en_france" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_cadre_ou_professions_intermediaires]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_cadre_ou_professions_intermediaires" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_stables]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_stables" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_a_temps_plein]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_a_temps_plein" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_median_des_emplois_a_temps_plein]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_median_des_emplois_a_temps_plein" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_brut_annuel_estime" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[de_diplomes_boursiers]"
+                      dataType="wstr"
+                      length="50"
+                      name="de_diplomes_boursiers" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_chomage_regional]"
+                      dataType="wstr"
+                      length="50"
+                      name="taux_de_chomage_regional" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_median_regional]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_mensuel_median_regional" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_cadre]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_cadre" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_exterieurs_a_la_region_de_luniversite]"
+                      dataType="wstr"
+                      length="50"
+                      name="emplois_exterieurs_a_la_region_de_luniversite" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[femmes]"
+                      dataType="wstr"
+                      length="50"
+                      name="femmes" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_regional_1er_quartile]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_mensuel_regional_1er_quartile" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_regional_3eme_quartile]"
+                      dataType="wstr"
+                      length="50"
+                      name="salaire_net_mensuel_regional_3eme_quartile" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_etab]"
+                      dataType="wstr"
+                      length="50"
+                      name="cle_etab" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_disc]"
+                      dataType="wstr"
+                      length="50"
+                      name="cle_disc" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[id_paysage]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_paysage" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\Erreurs CSV"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
               description="Destination de fichier plat"
               localeId="1036"
-              name="Destination de fichier plat"
+              name="Erreurs CSV"
               version="1">
               <properties>
                 <property
@@ -6095,282 +6606,282 @@ ORDER BY NomEtablissement</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Integration Fait\Destination de fichier plat.Connections[FlatFileConnection]"
+                  refId="Package\Integration Fait\Erreurs CSV.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Erreur]"
                   connectionManagerRefId="Package.ConnectionManagers[Erreur]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat]"
                   hasSideEffects="true"
                   name="Entrée de destination de fichier plat">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[annee]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[annee]"
                       cachedDataType="i4"
                       cachedName="annee"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[annee]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[diplome]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[diplome]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="diplome"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[diplome]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[etablissement]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[etablissement]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="etablissement"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[etablissement]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[academie]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[academie]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="academie"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[academie]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[academie]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[domaine]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[domaine]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="domaine"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[domaine]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[domaine]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[discipline]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[discipline]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="discipline"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[discipline]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[taux_de_reponse]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[taux_de_reponse]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_de_reponse"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[taux_dinsertion]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[taux_dinsertion]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_dinsertion"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[taux_d_emploi]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[taux_d_emploi]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_d_emploi"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[salaire_brut_annuel_estime]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="salaire_brut_annuel_estime"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[situation]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[situation]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="situation"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[nombre_de_reponses]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[nombre_de_reponses]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="nombre_de_reponses"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[poids_de_la_discipline]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[poids_de_la_discipline]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="poids_de_la_discipline"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]" />
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idDiscipline]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[idDiscipline]"
                       cachedDataType="i4"
                       cachedName="idDiscipline"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
                       lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance].Columns[idDiscipline]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idDiplome]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[idDiplome]"
                       cachedDataType="i4"
                       cachedName="idDiplome"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
                       lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance].Columns[idDiplome]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idLieu]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[idLieu]"
                       cachedDataType="i4"
                       cachedName="idLieu"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
                       lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance].Columns[idLieu]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[IdTemps]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[IdTemps]"
                       cachedDataType="i4"
                       cachedName="IdTemps"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
                       lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[SituationMois]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[SituationMois]"
                       cachedDataType="i4"
                       cachedName="SituationMois"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
                       lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[NombreReponsesCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[NombreReponsesCAST(INT)]"
                       cachedDataType="i4"
                       cachedName="NombreReponsesCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
                       lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[TauxInsertionCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[TauxInsertionCAST(INT)]"
                       cachedDataType="i4"
                       cachedName="TauxInsertionCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
                       lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
                       cachedDataType="i4"
                       cachedName="SalaireBrutAnnuelEstimeCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
                       lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[TauxReponsesCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[TauxReponsesCAST(INT)]"
                       cachedDataType="i4"
                       cachedName="TauxReponsesCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
                       lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ErrorCode]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
                       lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]" />
                     <inputColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ErrorColumn]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
                       lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
                       dataType="i4"
                       name="annee" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
                       dataType="wstr"
                       length="50"
                       name="diplome" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
                       dataType="wstr"
                       length="50"
                       name="etablissement" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
                       dataType="wstr"
                       length="50"
                       name="academie" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
                       dataType="wstr"
                       length="50"
                       name="domaine" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
                       dataType="wstr"
                       length="100"
                       name="discipline" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
                       dataType="wstr"
                       length="50"
                       name="situation" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
                       dataType="wstr"
                       length="50"
                       name="nombre_de_reponses" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
                       dataType="wstr"
                       length="50"
                       name="taux_de_reponse" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
                       dataType="wstr"
                       length="50"
                       name="poids_de_la_discipline" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
                       dataType="wstr"
                       length="50"
                       name="taux_dinsertion" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
                       dataType="wstr"
                       length="50"
                       name="taux_d_emploi" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
                       dataType="wstr"
                       length="50"
                       name="salaire_brut_annuel_estime" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
                       dataType="i4"
                       name="idDiscipline" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
                       dataType="i4"
                       name="idDiplome" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
                       dataType="i4"
                       name="idLieu" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
                       dataType="i4"
                       name="IdTemps" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
                       dataType="i4"
                       name="SituationMois" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
                       dataType="i4"
                       name="NombreReponsesCAST(INT)" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
                       dataType="i4"
                       name="TauxInsertionCAST(INT)" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
                       dataType="i4"
                       name="SalaireBrutAnnuelEstimeCAST(INT)" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
                       dataType="i4"
                       name="TauxReponsesCAST(INT)" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
                       dataType="i4"
                       name="ErrorCode" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
                   </externalMetadataColumns>
@@ -6627,7 +7138,7 @@ where [refTable].[NomDiplomeW] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]};</property>
+                  name="ParameterMap">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[diplome]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -6655,7 +7166,7 @@ where [refTable].[NomDiplomeW] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="diplome"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]">
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[diplome]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -6786,7 +7297,7 @@ where [refTable].[NomDisciplineW] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]};</property>
+                  name="ParameterMap">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[discipline]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -6814,7 +7325,7 @@ where [refTable].[NomDisciplineW] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="discipline"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]">
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[discipline]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -6945,7 +7456,7 @@ where [refTable].[NomEtablissementW] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]};</property>
+                  name="ParameterMap">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[etablissement]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -6973,7 +7484,7 @@ where [refTable].[NomEtablissementW] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="etablissement"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]">
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[etablissement]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -7104,7 +7615,7 @@ where [refTable].[AnneeTemps] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]};</property>
+                  name="ParameterMap">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[annee]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -7131,7 +7642,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       refId="Package\Integration Fait\RechercheTemps.Inputs[Entrée de recherche].Columns[annee]"
                       cachedDataType="i4"
                       cachedName="annee"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]">
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[annee]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -7225,7 +7736,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       cachedName="taux_dinsertion"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -7233,7 +7744,7 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -7247,7 +7758,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="situation"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]" />
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]" />
                     <inputColumn
                       refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
                       cachedDataType="wstr"
@@ -7255,7 +7766,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       cachedName="salaire_brut_annuel_estime"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -7263,7 +7774,7 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "" || [TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == ".") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == ".") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -7279,7 +7790,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       cachedName="nombre_de_reponses"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -7287,7 +7798,7 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">[TRIM](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? NULL(DT_WSTR,50) : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                          name="Expression">[TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -7321,7 +7832,7 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)[SUBSTRING](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]},1,2)</property>
+                          name="Expression">(DT_I4)[SUBSTRING](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]},1,2)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -7359,517 +7870,6 @@ where [refTable].[AnneeTemps] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Integration Fait\Source du fichier plat"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
-              description="Source du fichier plat"
-              localeId="1036"
-              name="Source du fichier plat"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Integration Fait\Source du fichier plat.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[insert_pro]"
-                  connectionManagerRefId="Package.ConnectionManagers[insert_pro]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
-                  name="Sortie de source de fichier plat">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[annee]"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[annee]"
-                      name="annee"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[diplome]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[diplome]"
-                      name="diplome"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissement]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[etablissement]"
-                      name="etablissement"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[academie]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[academie]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[academie]"
-                      name="academie"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[domaine]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[domaine]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[domaine]"
-                      name="domaine"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[discipline]"
-                      length="100"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[discipline]"
-                      name="discipline"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_reponse]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
-                      name="taux_de_reponse"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_dinsertion]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
-                      name="taux_dinsertion"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]"
-                      name="taux_d_emploi"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
-                      name="salaire_brut_annuel_estime"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[situation]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[situation]"
-                      name="situation"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[nombre_de_reponses]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
-                      name="nombre_de_reponses"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[poids_de_la_discipline]"
-                      length="50"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]"
-                      name="poids_de_la_discipline"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indique si les données sont au format binaire."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[annee]"
-                      dataType="i4"
-                      name="annee" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[diplome]"
-                      dataType="wstr"
-                      length="50"
-                      name="diplome" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[numero_de_l_etablissement]"
-                      dataType="wstr"
-                      length="50"
-                      name="numero_de_l_etablissement" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissement]"
-                      dataType="wstr"
-                      length="50"
-                      name="etablissement" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[etablissementactuel]"
-                      dataType="wstr"
-                      length="50"
-                      name="etablissementactuel" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[code_de_l_academie]"
-                      dataType="wstr"
-                      length="50"
-                      name="code_de_l_academie" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[academie]"
-                      dataType="wstr"
-                      length="50"
-                      name="academie" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[code_du_domaine]"
-                      dataType="wstr"
-                      length="50"
-                      name="code_du_domaine" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[domaine]"
-                      dataType="wstr"
-                      length="50"
-                      name="domaine" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[code_de_la_discipline]"
-                      dataType="wstr"
-                      length="50"
-                      name="code_de_la_discipline" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[discipline]"
-                      dataType="wstr"
-                      length="100"
-                      name="discipline" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[situation]"
-                      dataType="wstr"
-                      length="50"
-                      name="situation" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[remarque]"
-                      dataType="wstr"
-                      length="50"
-                      name="remarque" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[nombre_de_reponses]"
-                      dataType="wstr"
-                      length="50"
-                      name="nombre_de_reponses" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_reponse]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_de_reponse" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[poids_de_la_discipline]"
-                      dataType="wstr"
-                      length="50"
-                      name="poids_de_la_discipline" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_dinsertion]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_dinsertion" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_d_emploi" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_d_emploi_salarie_en_france]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_d_emploi_salarie_en_france" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_cadre_ou_professions_intermediaires]"
-                      dataType="wstr"
-                      length="50"
-                      name="emplois_cadre_ou_professions_intermediaires" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_stables]"
-                      dataType="wstr"
-                      length="50"
-                      name="emplois_stables" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_a_temps_plein]"
-                      dataType="wstr"
-                      length="50"
-                      name="emplois_a_temps_plein" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_median_des_emplois_a_temps_plein]"
-                      dataType="wstr"
-                      length="50"
-                      name="salaire_net_median_des_emplois_a_temps_plein" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
-                      dataType="wstr"
-                      length="50"
-                      name="salaire_brut_annuel_estime" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[de_diplomes_boursiers]"
-                      dataType="wstr"
-                      length="50"
-                      name="de_diplomes_boursiers" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[taux_de_chomage_regional]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_de_chomage_regional" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_median_regional]"
-                      dataType="wstr"
-                      length="50"
-                      name="salaire_net_mensuel_median_regional" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_cadre]"
-                      dataType="wstr"
-                      length="50"
-                      name="emplois_cadre" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[emplois_exterieurs_a_la_region_de_luniversite]"
-                      dataType="wstr"
-                      length="50"
-                      name="emplois_exterieurs_a_la_region_de_luniversite" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[femmes]"
-                      dataType="wstr"
-                      length="50"
-                      name="femmes" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_regional_1er_quartile]"
-                      dataType="wstr"
-                      length="50"
-                      name="salaire_net_mensuel_regional_1er_quartile" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[salaire_net_mensuel_regional_3eme_quartile]"
-                      dataType="wstr"
-                      length="50"
-                      name="salaire_net_mensuel_regional_3eme_quartile" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_etab]"
-                      dataType="wstr"
-                      length="50"
-                      name="cle_etab" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_disc]"
-                      dataType="wstr"
-                      length="50"
-                      name="cle_disc" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[id_paysage]"
-                      dataType="wstr"
-                      length="50"
-                      name="id_paysage" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de source de fichier plat">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
-                      codePage="65001"
-                      dataType="text"
-                      description="Colonne de sortie d'erreur de source de fichier plat"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
-                      name="Colonne de sortie d'erreur de source de fichier plat" />
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Integration Fait\TauxReponses"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
@@ -7889,7 +7889,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       cachedName="taux_de_reponse"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -7897,7 +7897,7 @@ where [refTable].[AnneeTemps] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || [ISNULL](#{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]})) ? #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || [ISNULL](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]})) ? #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -7911,7 +7911,7 @@ where [refTable].[AnneeTemps] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="nombre_de_reponses"
-                      lineageId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7954,7 +7954,7 @@ where [refTable].[AnneeTemps] = ?</property>
           <paths>
             <path
               refId="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
-              endId="Package\Integration Fait\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+              endId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat]"
               name="Sortie d'erreur de destination OLE DB"
               startId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB]" />
             <path
@@ -7996,7 +7996,7 @@ where [refTable].[AnneeTemps] = ?</property>
               refId="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
               endId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]"
               name="Sortie de source de fichier plat"
-              startId="Package\Integration Fait\Source du fichier plat.Outputs[Sortie de source de fichier plat]" />
+              startId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9052,23 +9052,23 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Fait\RechercheDiscipline"
           TopLeft="630.333333333333,190.333333333333" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\Integration Fait\Source du fichier plat"
-          TopLeft="630.333333333333,118.333333333333" />
+          Size="139,42"
+          Id="Package\Integration Fait\CSV Source"
+          TopLeft="649.333333333333,121.333333333333" />
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
-          TopLeft="720.833333333333,160.333333333333">
+          TopLeft="719.583333333333,163.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,30"
+              EndConnector="0,27"
               Start="0,0"
-              End="0,22.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9270,30 +9270,30 @@ where [refTable].[AnneeTemps] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="202,42"
-          Id="Package\Integration Fait\Destination de fichier plat"
-          TopLeft="624,806" />
+          Size="141,42"
+          Id="Package\Integration Fait\Erreurs CSV"
+          TopLeft="652,812" />
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
-          TopLeft="726.25,762">
+          TopLeft="725,762">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43.9999999999999"
+              EndConnector="0,49.9999999999999"
               Start="0,0"
-              End="0,36.4999999999999">
+              End="0,42.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.4999999999999" />
+                    End="0,42.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-83.281484375,13.3754882812499,166.56296875,9.7490234375"
+              BoundingBox="-83.281484375,16.3754882812499,166.56296875,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="175"
-  DTS:VersionGUID="{92467195-16CC-4933-8890-A10A38CDDF8E}">
+  DTS:VersionBuild="188"
+  DTS:VersionGUID="{D05284D2-6E36-41D6-B67C-B81C1FC1D6B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,206 +47,101 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="annee"
-              DTS:DTSID="{A1AAFEFD-49FF-4604-9376-7B0337347863}"
+              DTS:ObjectName="IdDiscipline"
+              DTS:DTSID="{4369372B-AF0D-42B4-84D2-F4590581DA50}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="50"
-              DTS:DataType="130"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="diplome"
-              DTS:DTSID="{2D789EF2-71D4-4A1C-AE42-F2A6046BC998}"
+              DTS:ObjectName="IdDiplome"
+              DTS:DTSID="{73A4E33F-C36E-4C00-AE80-4A58433C3331}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="50"
-              DTS:DataType="130"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="etablissement"
-              DTS:DTSID="{3E45C587-533F-4B39-ADCB-071E01E84BD7}"
+              DTS:ObjectName="IdLieu"
+              DTS:DTSID="{10062BE6-DC6E-4AC3-ADD5-25D0ED0E91B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="academie"
-              DTS:DTSID="{A0B05BFF-37A0-4203-B656-AE410C94E334}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="domaine"
-              DTS:DTSID="{F560DF86-0C0E-40D3-A95B-40D45A4CB585}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="discipline"
-              DTS:DTSID="{70C89E72-86AC-4FB8-BD59-DFF9AF4238C9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="taux_de_reponse"
-              DTS:DTSID="{86AC86CE-AFAB-476C-AA18-A80999792174}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="taux_dinsertion"
-              DTS:DTSID="{DFF22F8D-08FA-4EDF-8B31-0032294EE0B7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="taux_d_emploi"
-              DTS:DTSID="{643B93A6-CD80-4EEC-921B-C2C9049C9C9D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="salaire_brut_annuel_estime"
-              DTS:DTSID="{3B71E674-80F2-4626-9248-73516CC1FCC1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="situation"
-              DTS:DTSID="{0F9B0C77-1DA5-45B5-BFF6-006C00DF7877}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="nombre_de_reponses"
-              DTS:DTSID="{9219F538-DBBA-491C-8DD2-5DCEA6F1E29B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="poids_de_la_discipline"
-              DTS:DTSID="{4FAAE44B-2E20-4FFD-BEDD-113E491CBEA4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="idDiscipline"
-              DTS:DTSID="{58AE9AB6-7CF9-4485-8294-52B13EC5F1B2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="idDiplome"
-              DTS:DTSID="{073D4387-5E3E-4358-807F-E01F8B98DC79}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="idLieu"
-              DTS:DTSID="{96CDBF0F-4FED-4B95-BC65-62A8CDE29C85}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="IdTemps"
-              DTS:DTSID="{943C5F8D-6D8D-42A6-BB3F-CE1D02AD4945}"
+              DTS:DTSID="{D867E8D2-E8C6-4618-856B-06079A7B2E37}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SituationMois"
-              DTS:DTSID="{D2FCD2A8-9629-47AF-ACBF-8CD860111946}"
+              DTS:DTSID="{03E867C3-6F23-46DC-BEF1-E6ABB0656EAA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="NombreReponsesCAST(INT)"
-              DTS:DTSID="{FEA1C793-23B2-42E7-A2BB-4E7D3960D65E}"
+              DTS:ObjectName="NombreReponses"
+              DTS:DTSID="{958E1E7B-D9AF-4167-A909-EAE979473B14}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="TauxInsertionCAST(INT)"
-              DTS:DTSID="{660DF80E-2073-49B1-8BC4-76942FE5F32B}"
+              DTS:ObjectName="TauxReponses"
+              DTS:DTSID="{32502E01-353A-4729-BEC3-C86373F09625}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="SalaireBrutAnnuelEstimeCAST(INT)"
-              DTS:DTSID="{6F1B3BC8-D714-49E3-9DD5-8AB08C06CDC4}"
+              DTS:ObjectName="TauxInsertion"
+              DTS:DTSID="{1B0F1CEC-EF78-4F9D-BAC0-1A2BA6C38149}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="TauxReponsesCAST(INT)"
-              DTS:DTSID="{834BCC43-EF7F-4934-AF18-412ABD698773}"
+              DTS:ObjectName="SalaireBrutAnnuelEstime"
+              DTS:DTSID="{CF638996-C1D9-4CA6-A9B6-33D55F97AD0F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{DCD90D8C-3C44-4F5F-8F9C-2839478F8DD4}"
+              DTS:DTSID="{7E373DAA-7674-4A78-A34A-3BA8291881C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{B1468B47-9104-4B9B-A8CC-E6356AF0D1E3}"
+              DTS:DTSID="{6B112DD9-6251-4DCD-966E-B727022B5EB1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -274,7 +169,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="annee"
-              DTS:DTSID="{8DB05469-E012-474C-866D-BB6E4C5088F6}"
+              DTS:DTSID="{603F3EB9-8EAA-462B-8229-B6C784D65CFE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -283,7 +178,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="diplome"
-              DTS:DTSID="{C3775383-ED24-40AB-8748-1AD961EF3786}"
+              DTS:DTSID="{A1544E85-7566-4997-8963-2871EB74BD4F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -292,7 +187,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="numero_de_l_etablissement"
-              DTS:DTSID="{294A9A4E-C860-44A9-ADBD-E165BA05E5FF}"
+              DTS:DTSID="{15A0E919-827B-40DE-B768-A7C285EC0BFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -301,7 +196,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="etablissement"
-              DTS:DTSID="{CAA633F2-2EC3-4884-B91E-5213410C1F5C}"
+              DTS:DTSID="{5F7D6F5C-D1D2-4E58-BB32-0CB56EF93FD9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -310,7 +205,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="etablissementactuel"
-              DTS:DTSID="{EA2842E8-3B0C-4496-86A8-59BDB67976F7}"
+              DTS:DTSID="{DB75559C-54DE-4F65-802F-3580A77DF23D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -319,7 +214,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="code_de_l_academie"
-              DTS:DTSID="{11CE9C24-3053-4E61-8D74-6A216A9B6F36}"
+              DTS:DTSID="{CC898DE0-4EE1-4F2D-969E-89A0FF5CACF5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -328,7 +223,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="academie"
-              DTS:DTSID="{441AFC89-C594-46FB-A09B-A79EF4ECDEBD}"
+              DTS:DTSID="{C28C46B0-CD6B-4A99-A6C1-CED167CD4815}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -337,7 +232,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="code_du_domaine"
-              DTS:DTSID="{52AAF5F9-843C-46A4-B20F-A5AC2E6B571C}"
+              DTS:DTSID="{A43E9FA7-8C35-4457-83E4-F9D37EA495D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -346,7 +241,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="domaine"
-              DTS:DTSID="{5FAF3D46-8041-4496-A338-C77BCB469917}"
+              DTS:DTSID="{69675459-AD30-4F19-8CBC-46EABBE96C38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -355,7 +250,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="code_de_la_discipline"
-              DTS:DTSID="{AB214D9A-C54D-47BF-AC55-A57287A32932}"
+              DTS:DTSID="{0BDD162B-F89F-4DF5-B804-FDBF8D15EEA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -364,7 +259,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="discipline"
-              DTS:DTSID="{68C1E5EA-4472-4785-9069-C6497A1CD2EA}"
+              DTS:DTSID="{0C05503F-3F3F-4A0D-A783-5C9FDC269742}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -373,7 +268,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="situation"
-              DTS:DTSID="{A06B7D31-66B6-49FA-B0FD-8E3388310EAD}"
+              DTS:DTSID="{77624C40-39B9-4DF7-BBC5-9A199DBAF7F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -382,7 +277,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="remarque"
-              DTS:DTSID="{9ED4CD6F-C29F-4185-A38D-3C174349BDF9}"
+              DTS:DTSID="{53061B28-8C59-44ED-9A15-99839793C02A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -391,7 +286,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nombre_de_reponses"
-              DTS:DTSID="{AF3DB411-5D19-406D-A79C-9F59C3A2BC31}"
+              DTS:DTSID="{F556B773-C78B-4965-87A1-11E4A987A558}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -400,7 +295,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_de_reponse"
-              DTS:DTSID="{40E4AF7A-5D95-4217-B6B1-04BF2EE7F0F1}"
+              DTS:DTSID="{A3BF2623-DFF2-46CF-BFE6-44FAC285C645}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -409,7 +304,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="poids_de_la_discipline"
-              DTS:DTSID="{458CE145-4A6C-4D6A-AA41-575C740A10C4}"
+              DTS:DTSID="{31F00ED0-4374-4763-8D6D-AA431CF1F5AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -418,7 +313,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_dinsertion"
-              DTS:DTSID="{A60A3B46-A686-4599-A629-C931BB2ECB68}"
+              DTS:DTSID="{8DD584F0-1942-4A3E-AFC3-EE6F2F26EC01}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -427,7 +322,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_d_emploi"
-              DTS:DTSID="{A2236CC8-DAAE-43C8-A60D-21261D5B16A5}"
+              DTS:DTSID="{9EF2678E-FA04-4E20-80A1-406150E3749F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -436,7 +331,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_d_emploi_salarie_en_france"
-              DTS:DTSID="{17235446-7227-491A-B7E2-32C4E22551FE}"
+              DTS:DTSID="{41A250C8-9453-43FF-A745-DE49303FB916}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -445,7 +340,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_cadre_ou_professions_intermediaires"
-              DTS:DTSID="{7A4511CB-B6CF-48E1-A36B-43A94A7BCE71}"
+              DTS:DTSID="{D40B812F-0BE0-4370-AFBE-E7ADD10AE831}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -454,7 +349,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_stables"
-              DTS:DTSID="{D92BE7DD-D07D-468F-85DE-225B347AA7E0}"
+              DTS:DTSID="{91B37477-2228-4F93-9AE1-187081E09BC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -463,7 +358,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_a_temps_plein"
-              DTS:DTSID="{8CD4DA27-D121-4ADE-8484-C97FC2F8FB94}"
+              DTS:DTSID="{FBD13C21-FB26-4535-8EE3-6BB4D656F1B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -472,7 +367,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_median_des_emplois_a_temps_plein"
-              DTS:DTSID="{AD3B8EC3-5313-4355-A604-29A48B6D2CE5}"
+              DTS:DTSID="{16155EA0-E484-4469-A9F4-3FE87A78B24F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -481,7 +376,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_brut_annuel_estime"
-              DTS:DTSID="{7764CC3A-91B6-4127-A432-89F25298ED6C}"
+              DTS:DTSID="{8F0E26CC-15EF-403C-8064-C12BB5F2DCC3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -490,7 +385,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="de_diplomes_boursiers"
-              DTS:DTSID="{94826A64-383B-4C63-B763-CE293E7C9A4A}"
+              DTS:DTSID="{2D4F25D7-B84A-4FB2-A0CB-7763C61808C3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -499,7 +394,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="taux_de_chomage_regional"
-              DTS:DTSID="{E101D8F8-C3C6-41E5-A49B-F70B7B0D1CB5}"
+              DTS:DTSID="{555943F3-823D-4EF5-8A37-1D4EB8027ECB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -508,7 +403,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_mensuel_median_regional"
-              DTS:DTSID="{CC674C0C-A39A-4035-ABE6-95F853EC3FDE}"
+              DTS:DTSID="{6DAEFA72-6AE9-41C8-8F05-E8512C8174BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -517,7 +412,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_cadre"
-              DTS:DTSID="{9844228B-5803-4A97-950A-C6CB38C1B4D9}"
+              DTS:DTSID="{72D162BC-E7D8-4B38-A724-6FAA1013BBB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -526,7 +421,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="emplois_exterieurs_a_la_region_de_luniversite"
-              DTS:DTSID="{3BBE235E-F70D-48AA-B051-31C4793DA088}"
+              DTS:DTSID="{7C29CAEE-DBB4-4807-B0FE-AAFF692F8D44}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -535,7 +430,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="femmes"
-              DTS:DTSID="{9BF29FA1-007F-4CEA-8FDC-0BAAF06C7235}"
+              DTS:DTSID="{9513C1BE-BACD-402E-B7B4-29CBE2B22C62}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -544,7 +439,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_mensuel_regional_1er_quartile"
-              DTS:DTSID="{A6CE5B67-BEAC-423C-846E-BA41636B2A07}"
+              DTS:DTSID="{8F326B33-7131-4F45-9942-FB62D77B9773}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -553,7 +448,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="salaire_net_mensuel_regional_3eme_quartile"
-              DTS:DTSID="{FE44C7BB-86E1-4232-8024-3FA6CEF0D4E5}"
+              DTS:DTSID="{5C0E1D61-920E-4C65-9932-A22995EBE7C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,16 +457,16 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cle_etab"
-              DTS:DTSID="{D71D4744-5438-4E8F-BA27-BF65F4C9CEFE}"
+              DTS:DTSID="{76EAA475-D944-4CD6-9FC9-4DAC3CD7F4C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cle_disc"
-              DTS:DTSID="{DB6C4FDE-188A-4A79-BF61-ED3792C11AB5}"
+              DTS:DTSID="{585316BE-1B60-4B8C-8C60-95B5FBEE894F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -580,7 +475,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="id_paysage"
-              DTS:DTSID="{DA05C53A-0A00-48F3-8F14-F0D92E260F4A}"
+              DTS:DTSID="{BA5AF44A-130B-459B-A177-9E033021483D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -5828,7 +5723,7 @@ ORDER BY NomEtablissement</property>
               name="Sortie de source de fichier plat"
               startId="Package\Integration Dimensions\CSV.Outputs[Sortie de source de fichier plat]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
+              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
               endId="Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion]"
               name="Sortie de source OLE DB"
               startId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB]" />
@@ -5843,27 +5738,27 @@ ORDER BY NomEtablissement</property>
               name="Sortie de source OLE DB"
               startId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
+              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
               endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée droite de jointure de fusion]"
               name="Sortie de source OLE DB"
               startId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri2]"
+              refId="Package\Integration Dimensions.Paths[Sortie de tri]"
               endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri]"
+              refId="Package\Integration Dimensions.Paths[Sortie de tri1]"
               endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriTemps.Outputs[Sortie de tri]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri3]"
+              refId="Package\Integration Dimensions.Paths[Sortie de tri2]"
               endId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri1]"
+              refId="Package\Integration Dimensions.Paths[Sortie de tri3]"
               endId="Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriDisciplines.Outputs[Sortie de tri]" />
@@ -5906,163 +5801,178 @@ ORDER BY NomEtablissement</property>
           version="1">
           <components>
             <component
-              refId="Package\Integration Fait\CAST INT"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
-              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
-              name="CAST INT"
+              refId="Package\Integration Fait\Conversion en entier"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion en entier"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]"
-                  description="Entrée de la transformation de colonnes dérivées"
-                  name="Entrée de colonne dérivée">
+                  refId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
+                      refId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données].Columns[nombre_de_reponses]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="nombre_de_reponses"
                       lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
                     <inputColumn
-                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[taux_de_reponse]"
+                      refId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données].Columns[taux_de_reponse]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_de_reponse"
                       lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
                     <inputColumn
-                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[taux_dinsertion]"
+                      refId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données].Columns[taux_dinsertion]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="taux_dinsertion"
                       lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
                     <inputColumn
-                      refId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
+                      refId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données].Columns[salaire_brut_annuel_estime]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="salaire_brut_annuel_estime"
                       lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données].Columns[situation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="situation"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée]"
-                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données]"
                   exclusionGroup="1"
-                  name="Sortie de colonne dérivée"
-                  synchronousInputId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]">
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]"
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[NombreReponsesINT]"
                       dataType="i4"
-                      errorOrTruncationOperation="Calcul"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]"
-                      name="NombreReponsesCAST(INT)"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[NombreReponsesINT]"
+                      name="NombreReponsesINT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
                         <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)nombre_de_reponses</property>
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]"
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxReponsesINT]"
                       dataType="i4"
-                      errorOrTruncationOperation="Calcul"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]"
-                      name="TauxInsertionCAST(INT)"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxReponsesINT]"
+                      name="TauxReponsesINT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
                         <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)taux_dinsertion</property>
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxInsertionINT]"
                       dataType="i4"
-                      errorOrTruncationOperation="Calcul"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
-                      name="SalaireBrutAnnuelEstimeCAST(INT)"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxInsertionINT]"
+                      name="TauxInsertionINT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
                         <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)salaire_brut_annuel_estime</property>
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]"
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SalaireBrutAnnuelEstimeINT]"
                       dataType="i4"
-                      errorOrTruncationOperation="Calcul"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]"
-                      name="TauxReponsesCAST(INT)"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SalaireBrutAnnuelEstimeINT]"
+                      name="SalaireBrutAnnuelEstimeINT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SituationMoisINT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SituationMoisINT]"
+                      name="SituationMoisINT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
                         <property
                           containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)taux_de_reponse</property>
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée]"
-                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie d'erreur de conversion de données]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de colonne dérivée"
-                  synchronousInputId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]">
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      refId="Package\Integration Fait\Conversion en entier.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -6373,6 +6283,27 @@ ORDER BY NomEtablissement</property>
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[cle_disc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_disc]"
+                      length="10"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[cle_disc]"
+                      name="cle_disc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6543,7 +6474,7 @@ ORDER BY NomEtablissement</property>
                     <externalMetadataColumn
                       refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[cle_disc]"
                       dataType="wstr"
-                      length="50"
+                      length="10"
                       name="cle_disc" />
                     <externalMetadataColumn
                       refId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].ExternalColumns[id_paysage]"
@@ -6618,112 +6549,22 @@ ORDER BY NomEtablissement</property>
                   name="Entrée de destination de fichier plat">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[annee]"
-                      cachedDataType="i4"
-                      cachedName="annee"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[annee]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[diplome]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="diplome"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[diplome]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[etablissement]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="etablissement"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[etablissement]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[academie]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="academie"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[academie]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[domaine]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="domaine"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[domaine]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[discipline]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="discipline"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[discipline]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[taux_de_reponse]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="taux_de_reponse"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[taux_dinsertion]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="taux_dinsertion"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[taux_d_emploi]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="taux_d_emploi"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_d_emploi]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[salaire_brut_annuel_estime]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="salaire_brut_annuel_estime"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[situation]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="situation"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[nombre_de_reponses]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="nombre_de_reponses"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[poids_de_la_discipline]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="poids_de_la_discipline"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[poids_de_la_discipline]" />
-                    <inputColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[idDiscipline]"
                       cachedDataType="i4"
                       cachedName="idDiscipline"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdDiscipline]"
                       lineageId="Package\Integration Fait\RechercheDiscipline.Outputs[Sortie de recherche avec correspondance].Columns[idDiscipline]" />
                     <inputColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[idDiplome]"
                       cachedDataType="i4"
                       cachedName="idDiplome"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdDiplome]"
                       lineageId="Package\Integration Fait\RechercheDiplome.Outputs[Sortie de recherche avec correspondance].Columns[idDiplome]" />
                     <inputColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[idLieu]"
                       cachedDataType="i4"
                       cachedName="idLieu"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdLieu]"
                       lineageId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance].Columns[idLieu]" />
                     <inputColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[IdTemps]"
@@ -6731,36 +6572,6 @@ ORDER BY NomEtablissement</property>
                       cachedName="IdTemps"
                       externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
                       lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[SituationMois]"
-                      cachedDataType="i4"
-                      cachedName="SituationMois"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
-                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[NombreReponsesCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="NombreReponsesCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[TauxInsertionCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="TauxInsertionCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="SalaireBrutAnnuelEstimeCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[TauxReponsesCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="TauxReponsesCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]" />
                     <inputColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[ErrorCode]"
                       cachedDataType="i4"
@@ -6773,120 +6584,336 @@ ORDER BY NomEtablissement</property>
                       cachedName="ErrorColumn"
                       externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
                       lineageId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[SituationMoisINT]"
+                      cachedDataType="i4"
+                      cachedName="SituationMoisINT"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SituationMoisINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[NombreReponsesINT]"
+                      cachedDataType="i4"
+                      cachedName="NombreReponsesINT"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponses]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[NombreReponsesINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[TauxReponsesINT]"
+                      cachedDataType="i4"
+                      cachedName="TauxReponsesINT"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponses]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxReponsesINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[TauxInsertionINT]"
+                      cachedDataType="i4"
+                      cachedName="TauxInsertionINT"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertion]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxInsertionINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].Columns[SalaireBrutAnnuelEstimeINT]"
+                      cachedDataType="i4"
+                      cachedName="SalaireBrutAnnuelEstimeINT"
+                      externalMetadataColumnId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstime]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SalaireBrutAnnuelEstimeINT]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[annee]"
-                      dataType="i4"
-                      name="annee" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[diplome]"
-                      dataType="wstr"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdDiscipline]"
+                      codePage="65001"
+                      dataType="str"
                       length="50"
-                      name="diplome" />
+                      name="IdDiscipline" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[etablissement]"
-                      dataType="wstr"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdDiplome]"
+                      codePage="65001"
+                      dataType="str"
                       length="50"
-                      name="etablissement" />
+                      name="IdDiplome" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[academie]"
-                      dataType="wstr"
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdLieu]"
+                      codePage="65001"
+                      dataType="str"
                       length="50"
-                      name="academie" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[domaine]"
-                      dataType="wstr"
-                      length="50"
-                      name="domaine" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[discipline]"
-                      dataType="wstr"
-                      length="100"
-                      name="discipline" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[situation]"
-                      dataType="wstr"
-                      length="50"
-                      name="situation" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[nombre_de_reponses]"
-                      dataType="wstr"
-                      length="50"
-                      name="nombre_de_reponses" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_de_reponse]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_de_reponse" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[poids_de_la_discipline]"
-                      dataType="wstr"
-                      length="50"
-                      name="poids_de_la_discipline" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_dinsertion]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_dinsertion" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[taux_d_emploi]"
-                      dataType="wstr"
-                      length="50"
-                      name="taux_d_emploi" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[salaire_brut_annuel_estime]"
-                      dataType="wstr"
-                      length="50"
-                      name="salaire_brut_annuel_estime" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiscipline]"
-                      dataType="i4"
-                      name="idDiscipline" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idDiplome]"
-                      dataType="i4"
-                      name="idDiplome" />
-                    <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[idLieu]"
-                      dataType="i4"
-                      name="idLieu" />
+                      name="IdLieu" />
                     <externalMetadataColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[IdTemps]"
-                      dataType="i4"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
                       name="IdTemps" />
                     <externalMetadataColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SituationMois]"
-                      dataType="i4"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
                       name="SituationMois" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponsesCAST(INT)]"
-                      dataType="i4"
-                      name="NombreReponsesCAST(INT)" />
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[NombreReponses]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="NombreReponses" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertionCAST(INT)]"
-                      dataType="i4"
-                      name="TauxInsertionCAST(INT)" />
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponses]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="TauxReponses" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstimeCAST(INT)]"
-                      dataType="i4"
-                      name="SalaireBrutAnnuelEstimeCAST(INT)" />
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxInsertion]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="TauxInsertion" />
                     <externalMetadataColumn
-                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[TauxReponsesCAST(INT)]"
-                      dataType="i4"
-                      name="TauxReponsesCAST(INT)" />
+                      refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[SalaireBrutAnnuelEstime]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="SalaireBrutAnnuelEstime" />
                     <externalMetadataColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
-                      dataType="i4"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
                       name="ErrorCode" />
                     <externalMetadataColumn
                       refId="Package\Integration Fait\Erreurs CSV.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
                       name="ErrorColumn" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\Filtrage des données  (TauxReponses)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Filtrage des données  (TauxReponses)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Inputs[Entrée de colonne dérivée].Columns[taux_de_reponse]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_de_reponse"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || [ISNULL](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]})) ? #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(nombre_de_reponses == "0" || ISNULL(nombre_de_reponses)) ? nombre_de_reponses : taux_de_reponse</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre_de_reponses"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\Filtrage des données  (TauxReponses).Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\Filtrage des données  (TauxReponses).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée].Columns[taux_dinsertion]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="taux_dinsertion"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(taux_dinsertion == "ns" || taux_dinsertion == "nd" || TRIM(taux_dinsertion) == "") ? NULL(DT_WSTR,50) : taux_dinsertion</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée].Columns[situation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="situation"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[SUBSTRING](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(situation,1,2)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="salaire_brut_annuel_estime"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == ".") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(salaire_brut_annuel_estime == "ns" || salaire_brut_annuel_estime == "nd" || TRIM(salaire_brut_annuel_estime) == "" || TRIM(salaire_brut_annuel_estime) == ".") ? NULL(DT_WSTR,50) : salaire_brut_annuel_estime</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre_de_reponses"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(nombre_de_reponses) == "" ? NULL(DT_WSTR,50) : nombre_de_reponses</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
             </component>
             <component
               refId="Package\Integration Fait\New Fact"
@@ -6985,35 +7012,42 @@ ORDER BY NomEtablissement</property>
                       externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[IdTemps]"
                       lineageId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance].Columns[IdTemps]" />
                     <inputColumn
-                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[SituationMois]"
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[NombreReponsesINT]"
                       cachedDataType="i4"
-                      cachedName="SituationMois"
-                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SituationMois]"
-                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[NombreReponsesCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="NombreReponsesCAST(INT)"
+                      cachedName="NombreReponsesINT"
                       externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[NombreReponses]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[NombreReponsesCAST(INT)]" />
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[NombreReponsesINT]" />
                     <inputColumn
-                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[TauxInsertionCAST(INT)]"
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[TauxReponsesINT]"
                       cachedDataType="i4"
-                      cachedName="TauxInsertionCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxInsertion]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxInsertionCAST(INT)]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[SalaireBrutAnnuelEstimeCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="SalaireBrutAnnuelEstimeCAST(INT)"
-                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SalaireBrutAnnuelEstime]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[SalaireBrutAnnuelEstimeCAST(INT)]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[TauxReponsesCAST(INT)]"
-                      cachedDataType="i4"
-                      cachedName="TauxReponsesCAST(INT)"
+                      cachedName="TauxReponsesINT"
                       externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxReponses]"
-                      lineageId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée].Columns[TauxReponsesCAST(INT)]" />
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxReponsesINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[TauxInsertionINT]"
+                      cachedDataType="i4"
+                      cachedName="TauxInsertionINT"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[TauxInsertion]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[TauxInsertionINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[SalaireBrutAnnuelEstimeINT]"
+                      cachedDataType="i4"
+                      cachedName="SalaireBrutAnnuelEstimeINT"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SalaireBrutAnnuelEstime]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SalaireBrutAnnuelEstimeINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[SituationMoisINT]"
+                      cachedDataType="i4"
+                      cachedName="SituationMoisINT"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SituationMois]"
+                      lineageId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données].Columns[SituationMoisINT]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[cle_disc]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="cle_disc"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[cle_disc]"
+                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[cle_disc]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7053,6 +7087,11 @@ ORDER BY NomEtablissement</property>
                       refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[SalaireBrutAnnuelEstime]"
                       dataType="i4"
                       name="SalaireBrutAnnuelEstime" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[cle_disc]"
+                      dataType="wstr"
+                      length="10"
+                      name="cle_disc" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7716,240 +7755,6 @@ where [refTable].[AnneeTemps] = ?</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
-              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
-              name="SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]"
-                  description="Entrée de la transformation de colonnes dérivées"
-                  name="Entrée de colonne dérivée">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[taux_dinsertion]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="taux_dinsertion"
-                      errorOrTruncationOperation="Calcul"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "ns" || #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]} == "nd" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}) == "") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_dinsertion]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(taux_dinsertion == "ns" || taux_dinsertion == "nd" || TRIM(taux_dinsertion) == "") ? NULL(DT_WSTR,50) : taux_dinsertion</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[situation]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="situation"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]" />
-                    <inputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[salaire_brut_annuel_estime]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="salaire_brut_annuel_estime"
-                      errorOrTruncationOperation="Calcul"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "ns" || #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]} == "nd" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == "" || [TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}) == ".") ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[salaire_brut_annuel_estime]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(salaire_brut_annuel_estime == "ns" || salaire_brut_annuel_estime == "nd" || TRIM(salaire_brut_annuel_estime) == "" || TRIM(salaire_brut_annuel_estime) == ".") ? NULL(DT_WSTR,50) : salaire_brut_annuel_estime</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="nombre_de_reponses"
-                      errorOrTruncationOperation="Calcul"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">[TRIM](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}) == "" ? NULL(DT_WSTR,50) : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">TRIM(nombre_de_reponses) == "" ? NULL(DT_WSTR,50) : nombre_de_reponses</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée]"
-                  description="Sortie par défaut de la transformation de colonnes dérivées"
-                  exclusionGroup="1"
-                  name="Sortie de colonne dérivée"
-                  synchronousInputId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Calcul"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée].Columns[SituationMois]"
-                      name="SituationMois"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(DT_I4)[SUBSTRING](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[situation]},1,2)</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)SUBSTRING(situation,1,2)</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée]"
-                  description="Sortie d'erreur de la transformation de colonnes dérivées"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de colonne dérivée"
-                  synchronousInputId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Integration Fait\TauxReponses"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
-              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
-              name="TauxReponses"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]"
-                  description="Entrée de la transformation de colonnes dérivées"
-                  name="Entrée de colonne dérivée">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée].Columns[taux_de_reponse]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="taux_de_reponse"
-                      errorOrTruncationOperation="Calcul"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression de colonne dérivée"
-                          name="Expression">(#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} == "0" || [ISNULL](#{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]})) ? #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]} : #{Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[taux_de_reponse]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expression claire de colonne dérivée"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(nombre_de_reponses == "0" || ISNULL(nombre_de_reponses)) ? nombre_de_reponses : taux_de_reponse</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée].Columns[nombre_de_reponses]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="nombre_de_reponses"
-                      lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[nombre_de_reponses]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Integration Fait\TauxReponses.Outputs[Sortie de colonne dérivée]"
-                  description="Sortie par défaut de la transformation de colonnes dérivées"
-                  exclusionGroup="1"
-                  name="Sortie de colonne dérivée"
-                  synchronousInputId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée]"
-                  description="Sortie d'erreur de la transformation de colonnes dérivées"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Sortie d'erreur de colonne dérivée"
-                  synchronousInputId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Integration Fait\TauxReponses.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -7959,19 +7764,19 @@ where [refTable].[AnneeTemps] = ?</property>
               startId="Package\Integration Fait\New Fact.Outputs[Sortie d'erreur de destination OLE DB]" />
             <path
               refId="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
-              endId="Package\Integration Fait\TauxReponses.Inputs[Entrée de colonne dérivée]"
+              endId="Package\Integration Fait\Filtrage des données  (TauxReponses).Inputs[Entrée de colonne dérivée]"
               name="Sortie de colonne dérivée"
-              startId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Outputs[Sortie de colonne dérivée]" />
+              startId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
-              endId="Package\Integration Fait\CAST INT.Inputs[Entrée de colonne dérivée]"
+              endId="Package\Integration Fait\Conversion en entier.Inputs[Entrée de conversion de données]"
               name="Sortie de colonne dérivée"
-              startId="Package\Integration Fait\TauxReponses.Outputs[Sortie de colonne dérivée]" />
+              startId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
+              refId="Package\Integration Fait.Paths[Sortie de conversion de données]"
               endId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB]"
-              name="Sortie de colonne dérivée"
-              startId="Package\Integration Fait\CAST INT.Outputs[Sortie de colonne dérivée]" />
+              name="Sortie de conversion de données"
+              startId="Package\Integration Fait\Conversion en entier.Outputs[Sortie de conversion de données]" />
             <path
               refId="Package\Integration Fait.Paths[Sortie de recherche avec correspondance]"
               endId="Package\Integration Fait\RechercheDiplome.Inputs[Entrée de recherche]"
@@ -7989,7 +7794,7 @@ where [refTable].[AnneeTemps] = ?</property>
               startId="Package\Integration Fait\RechercheLieux.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
-              endId="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses.Inputs[Entrée de colonne dérivée]"
+              endId="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses).Inputs[Entrée de colonne dérivée]"
               name="Sortie de recherche avec correspondance"
               startId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance]" />
             <path
@@ -8071,6 +7876,10 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Dimensions\C_U_Diplomes"
           TopLeft="664,457" />
         <NodeLayout
+          Size="163,42"
+          Id="Package\Integration Dimensions\TriLieuxCourants"
+          TopLeft="1154,295" />
+        <NodeLayout
           Size="138,42"
           Id="Package\Integration Dimensions\TriDiplomes"
           TopLeft="592.267842155216,293.268168367283" />
@@ -8087,6 +7896,10 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Dimensions\Horodatage"
           TopLeft="851.749983515591,78.3157886247721" />
         <NodeLayout
+          Size="135,42"
+          Id="Package\Integration Dimensions\CompLieux"
+          TopLeft="1075,379" />
+        <NodeLayout
           Size="182,42"
           Id="Package\Integration Dimensions\TriDiplomesCourants"
           TopLeft="751,293" />
@@ -8099,6 +7912,10 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Dimensions\New Temps"
           TopLeft="1392,565" />
         <NodeLayout
+          Size="118,42"
+          Id="Package\Integration Dimensions\TriLieux"
+          TopLeft="1014,294" />
+        <NodeLayout
           Size="141,42"
           Id="Package\Integration Dimensions\C_U_Temps"
           TopLeft="1467,458" />
@@ -8107,6 +7924,18 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Dimensions\CompDisciplines"
           TopLeft="230,377" />
         <NodeLayout
+          Size="121,42"
+          Id="Package\Integration Dimensions\Maj Lieu"
+          TopLeft="1150,572" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Integration Dimensions\New Lieu"
+          TopLeft="1003,572" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Integration Dimensions\C_U_Lieux"
+          TopLeft="1075,459" />
+        <NodeLayout
           Size="166,42"
           Id="Package\Integration Dimensions\Jointure de fusion"
           TopLeft="1457,375" />
@@ -8114,6 +7943,42 @@ where [refTable].[AnneeTemps] = ?</property>
           Size="154,42"
           Id="Package\Integration Dimensions\CompDiplomes"
           TopLeft="662,378" />
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Update3]"
+          TopLeft="1162.33333333333,501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.1666666666667,71"
+              Start="0,0"
+              End="48.1666666666667,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9063893016345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9063893016345"
+                    Point2="0,28.9063893016345"
+                    Point3="4,28.9063893016345" />
+                  <mssgle:LineSegment
+                    End="44.1666666666667,28.9063893016345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.1666666666667,28.9063893016345"
+                    Point2="48.1666666666667,28.9063893016345"
+                    Point3="48.1666666666667,32.9063893016345" />
+                  <mssgle:LineSegment
+                    End="48.1666666666667,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.80304036458337,33.9063893016345,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update2]"
           TopLeft="1559.66666666667,500">
@@ -8223,41 +8088,7 @@ where [refTable].[AnneeTemps] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de tri2]"
-          TopLeft="661.267842155216,335.268168367283">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.3988245114506,42.731831632717"
-              Start="0,0"
-              End="53.3988245114506,35.231831632717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.375457859017" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.375457859017"
-                    Point2="0,25.375457859017"
-                    Point3="4,25.375457859017" />
-                  <mssgle:LineSegment
-                    End="49.3988245114506,25.375457859017" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.3988245114506,25.375457859017"
-                    Point2="53.3988245114506,25.375457859017"
-                    Point3="53.3988245114506,29.375457859017" />
-                  <mssgle:LineSegment
-                    End="53.3988245114506,35.231831632717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de tri1]"
+          Id="Package\Integration Dimensions.Paths[Sortie de tri3]"
           TopLeft="227.113088326351,334.614031874876">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8287,11 +8118,49 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de tri]"
+          Id="Package\Integration Dimensions.Paths[Sortie de tri2]"
+          TopLeft="1073,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.3333333333333,43"
+              Start="0,0"
+              End="48.3333333333333,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.497803806735" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.497803806735"
+                    Point2="0,25.497803806735"
+                    Point3="4,25.497803806735" />
+                  <mssgle:LineSegment
+                    End="44.3333333333333,25.497803806735" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.3333333333333,25.497803806735"
+                    Point2="48.3333333333333,25.497803806735"
+                    Point3="48.3333333333333,29.497803806735" />
+                  <mssgle:LineSegment
+                    End="48.3333333333333,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de tri1]"
           TopLeft="1468,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8321,7 +8190,81 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de tri]"
+          TopLeft="661.267842155216,335.268168367283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53.3988245114506,42.731831632717"
+              Start="0,0"
+              End="53.3988245114506,35.231831632717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.375457859017" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.375457859017"
+                    Point2="0,25.375457859017"
+                    Point3="4,25.375457859017" />
+                  <mssgle:LineSegment
+                    End="49.3988245114506,25.375457859017" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.3988245114506,25.375457859017"
+                    Point2="53.3988245114506,25.375457859017"
+                    Point3="53.3988245114506,29.375457859017" />
+                  <mssgle:LineSegment
+                    End="53.3988245114506,35.231831632717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
+          TopLeft="1636,335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69.6666666666667,40"
+              Start="0,0"
+              End="-69.6666666666667,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.7708830548926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.7708830548926"
+                    Point2="0,23.7708830548926"
+                    Point3="-4,23.7708830548926" />
+                  <mssgle:LineSegment
+                    End="-65.6666666666667,23.7708830548926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-65.6666666666667,23.7708830548926"
+                    Point2="-69.6666666666667,23.7708830548926"
+                    Point3="-69.6666666666667,27.7708830548926" />
+                  <mssgle:LineSegment
+                    End="-69.6666666666667,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8355,7 +8298,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8389,41 +8334,45 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
-          TopLeft="1636,335">
+          TopLeft="1235.5,337">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-69.6666666666667,40"
+              EndConnector="-71.8333333333333,42"
               Start="0,0"
-              End="-69.6666666666667,32.5">
+              End="-71.8333333333333,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.7708830548926" />
+                    End="0,20.904831625183" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.7708830548926"
-                    Point2="0,23.7708830548926"
-                    Point3="-4,23.7708830548926" />
+                    Point1="0,20.904831625183"
+                    Point2="0,24.904831625183"
+                    Point3="-4,24.904831625183" />
                   <mssgle:LineSegment
-                    End="-65.6666666666667,23.7708830548926" />
+                    End="-67.8333333333333,24.904831625183" />
                   <mssgle:CubicBezierSegment
-                    Point1="-65.6666666666667,23.7708830548926"
-                    Point2="-69.6666666666667,23.7708830548926"
-                    Point3="-69.6666666666667,27.7708830548926" />
+                    Point1="-67.8333333333333,24.904831625183"
+                    Point2="-71.8333333333333,24.904831625183"
+                    Point3="-71.8333333333333,28.904831625183" />
                   <mssgle:LineSegment
-                    End="-69.6666666666667,32.5" />
+                    End="-71.8333333333333,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8445,7 +8394,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8479,7 +8430,45 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 3]"
+          TopLeft="932.553555131757,191.496239552974">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.446444868243,102.503760447026"
+              Start="0,0"
+              End="140.446444868243,95.003760447026">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.9090201229923" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.9090201229923"
+                    Point2="0,45.9090201229923"
+                    Point3="4,45.9090201229923" />
+                  <mssgle:LineSegment
+                    End="136.446444868243,45.9090201229923" />
+                  <mssgle:CubicBezierSegment
+                    Point1="136.446444868243,45.9090201229923"
+                    Point2="140.446444868243,45.9090201229923"
+                    Point3="140.446444868243,49.9090201229923" />
+                  <mssgle:LineSegment
+                    End="140.446444868243,95.003760447026" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8513,7 +8502,33 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
+          TopLeft="1142,421">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8535,7 +8550,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8557,7 +8574,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8579,7 +8598,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8601,7 +8622,9 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8635,7 +8658,45 @@ where [refTable].[AnneeTemps] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Create3]"
+          TopLeft="1120.66666666667,501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-55.1666666666667,71"
+              Start="0,0"
+              End="-55.1666666666667,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9063893016345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9063893016345"
+                    Point2="0,28.9063893016345"
+                    Point3="-4,28.9063893016345" />
+                  <mssgle:LineSegment
+                    End="-51.1666666666667,28.9063893016345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51.1666666666667,28.9063893016345"
+                    Point2="-55.1666666666667,28.9063893016345"
+                    Point3="-55.1666666666667,32.9063893016345" />
+                  <mssgle:LineSegment
+                    End="-55.1666666666667,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-42.6522005208334,33.9063893016345,30.137734375,9.5537109375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8746,226 +8807,6 @@ where [refTable].[AnneeTemps] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Integration Dimensions\TriLieuxCourants"
-          TopLeft="1154,295" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Integration Dimensions\TriLieux"
-          TopLeft="1014,294" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 3]"
-          TopLeft="932.553555131757,191.496239552974">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="140.446444868243,102.503760447026"
-              Start="0,0"
-              End="140.446444868243,95.003760447026">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.9090201229923" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.9090201229923"
-                    Point2="0,45.9090201229923"
-                    Point3="4,45.9090201229923" />
-                  <mssgle:LineSegment
-                    End="136.446444868243,45.9090201229923" />
-                  <mssgle:CubicBezierSegment
-                    Point1="136.446444868243,45.9090201229923"
-                    Point2="140.446444868243,45.9090201229923"
-                    Point3="140.446444868243,49.9090201229923" />
-                  <mssgle:LineSegment
-                    End="140.446444868243,95.003760447026" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="135,42"
-          Id="Package\Integration Dimensions\CompLieux"
-          TopLeft="1075,379" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de tri3]"
-          TopLeft="1073,336">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48.3333333333333,43"
-              Start="0,0"
-              End="48.3333333333333,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.497803806735" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.497803806735"
-                    Point2="0,25.497803806735"
-                    Point3="4,25.497803806735" />
-                  <mssgle:LineSegment
-                    End="44.3333333333333,25.497803806735" />
-                  <mssgle:CubicBezierSegment
-                    Point1="44.3333333333333,25.497803806735"
-                    Point2="48.3333333333333,25.497803806735"
-                    Point3="48.3333333333333,29.497803806735" />
-                  <mssgle:LineSegment
-                    End="48.3333333333333,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
-          TopLeft="1235.5,337">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-71.8333333333333,42"
-              Start="0,0"
-              End="-71.8333333333333,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.904831625183" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.904831625183"
-                    Point2="0,24.904831625183"
-                    Point3="-4,24.904831625183" />
-                  <mssgle:LineSegment
-                    End="-67.8333333333333,24.904831625183" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-67.8333333333333,24.904831625183"
-                    Point2="-71.8333333333333,24.904831625183"
-                    Point3="-71.8333333333333,28.904831625183" />
-                  <mssgle:LineSegment
-                    End="-71.8333333333333,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Integration Dimensions\C_U_Lieux"
-          TopLeft="1075,459" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
-          TopLeft="1142,421">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="125,42"
-          Id="Package\Integration Dimensions\New Lieu"
-          TopLeft="1003,572" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Create3]"
-          TopLeft="1120.66666666667,501">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-55.1666666666667,71"
-              Start="0,0"
-              End="-55.1666666666667,63.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.9063893016345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.9063893016345"
-                    Point2="0,28.9063893016345"
-                    Point3="-4,28.9063893016345" />
-                  <mssgle:LineSegment
-                    End="-51.1666666666667,28.9063893016345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-51.1666666666667,28.9063893016345"
-                    Point2="-55.1666666666667,28.9063893016345"
-                    Point3="-55.1666666666667,32.9063893016345" />
-                  <mssgle:LineSegment
-                    End="-55.1666666666667,63.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-42.6522005208334,33.9063893016345,30.137734375,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Integration Dimensions\Maj Lieu"
-          TopLeft="1150,572" />
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Update3]"
-          TopLeft="1162.33333333333,501">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48.1666666666667,71"
-              Start="0,0"
-              End="48.1666666666667,63.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.9063893016345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.9063893016345"
-                    Point2="0,28.9063893016345"
-                    Point3="4,28.9063893016345" />
-                  <mssgle:LineSegment
-                    End="44.1666666666667,28.9063893016345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="44.1666666666667,28.9063893016345"
-                    Point2="48.1666666666667,28.9063893016345"
-                    Point3="48.1666666666667,32.9063893016345" />
-                  <mssgle:LineSegment
-                    End="48.1666666666667,63.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="7.80304036458337,33.9063893016345,32.5605859375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9009,6 +8850,14 @@ where [refTable].[AnneeTemps] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Integration Dimensions\TriLieuxCourants">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\TriDisciplinesCourantes">
     <Properties>
       <Property>
@@ -9042,19 +8891,154 @@ where [refTable].[AnneeTemps] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Dimensions\New Lieu">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Integration Fait">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="180,42"
-          Id="Package\Integration Fait\RechercheDiscipline"
-          TopLeft="630.333333333333,190.333333333333" />
+          Size="173,42"
+          Id="Package\Integration Fait\RechercheDiplome"
+          TopLeft="634.333333333333,269.333333333333" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Integration Fait\New Fact"
+          TopLeft="659,709" />
+        <NodeLayout
+          Size="554,42"
+          Id="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses)"
+          TopLeft="448.666666666667,500.666666666666" />
         <NodeLayout
           Size="139,42"
           Id="Package\Integration Fait\CSV Source"
           TopLeft="649.333333333333,121.333333333333" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Integration Fait\RechercheLieux"
+          TopLeft="640.833333333333,344" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Integration Fait\Erreurs CSV"
+          TopLeft="654,788" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Integration Fait\RechercheDiscipline"
+          TopLeft="630.333333333333,190.333333333333" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Integration Fait\RechercheTemps"
+          TopLeft="639,423" />
+        <NodeLayout
+          Size="269,42"
+          Id="Package\Integration Fait\Filtrage des données  (TauxReponses)"
+          TopLeft="586.307692307692,571.653846153846" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Integration Fait\Conversion en entier"
+          TopLeft="635,641" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de conversion de données]"
+          TopLeft="723.25,683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
+          TopLeft="722.903846153846,613.653846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.346153846154"
+              Start="0,0"
+              End="0,19.846153846154">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.846153846154" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
+          TopLeft="723.237179487179,542.666666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.9871794871799"
+              Start="0,0"
+              End="0,21.4871794871799">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4871794871799" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
+          TopLeft="723,751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-83.281484375,9.87548828125,166.56296875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
           TopLeft="719.583333333333,163.333333333333">
@@ -9077,10 +9061,78 @@ where [refTable].[AnneeTemps] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Integration Fait\RechercheDiplome"
-          TopLeft="634.333333333333,269.333333333333" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
+          TopLeft="723.833333333333,465">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.6666666666661"
+              Start="0,0"
+              End="0,28.1666666666661">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.1666666666661" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.27864583333303,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="721.166666666667,386">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.9999999999999"
+              Start="0,0"
+              End="0,29.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.94531249999995,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="720.583333333333,311.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.6666666666667"
+              Start="0,0"
+              End="0,25.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,6.77864583333335,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance]"
           TopLeft="720.583333333333,232.333333333333">
@@ -9105,252 +9157,16 @@ where [refTable].[AnneeTemps] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Integration Fait\RechercheLieux"
-          TopLeft="640.833333333333,344" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="720.583333333333,311.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.6666666666667"
-              Start="0,0"
-              End="0,25.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,6.77864583333334,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Integration Fait\RechercheTemps"
-          TopLeft="639,423" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance2]"
-          TopLeft="721.166666666667,386">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.9999999999999"
-              Start="0,0"
-              End="0,29.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,8.94531249999997,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="441,42"
-          Id="Package\Integration Fait\SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses"
-          TopLeft="499.666666666667,499.666666666666" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
-          TopLeft="721.083333333333,465">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.6666666666665"
-              Start="0,0"
-              End="0,27.1666666666665">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.1666666666665" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,7.77864583333323,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Integration Fait\TauxReponses"
-          TopLeft="648.307692307692,572.653846153846" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
-          TopLeft="722.487179487179,541.666666666666">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30.9871794871797"
-              Start="0,0"
-              End="0,23.4871794871797">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.4871794871797" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="125,42"
-          Id="Package\Integration Fait\New Fact"
-          TopLeft="665,720" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Integration Fait\CAST INT"
-          TopLeft="655.833333333333,646.666666666667" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
-          TopLeft="722.570512820513,614.653846153846">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.0128205128206"
-              Start="0,0"
-              End="0,24.5128205128206">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5128205128206" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
-          TopLeft="723.916666666667,688.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.3333333333335"
-              Start="0,0"
-              End="0,23.8333333333335">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.8333333333335" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,3.91666666666674,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Integration Fait\Erreurs CSV"
-          TopLeft="652,812" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
-          TopLeft="725,762">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49.9999999999999"
-              Start="0,0"
-              End="0,42.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-83.281484375,16.3754882812499,166.56296875,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriLieuxCourants">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\New Lieu">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheDiscipline">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Integration Fait\RechercheDiplome">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9360,53 +9176,7 @@ where [refTable].[AnneeTemps] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheLieux">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheTemps">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTemps]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9423,6 +9193,75 @@ where [refTable].[AnneeTemps] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheLieux">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheDiscipline">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\RechercheTemps">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTemps]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

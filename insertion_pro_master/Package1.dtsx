@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="189"
-  DTS:VersionGUID="{F8025B15-4095-4FC7-9DD4-D3B1D485CFF4}">
+  DTS:VersionBuild="210"
+  DTS:VersionGUID="{48C2C38A-86A5-4FFF-849C-F614A6093619}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -536,6 +536,11 @@
                       cachedName="diplome"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri].Columns[diplome]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -608,6 +613,19 @@
                           name="InputColumnID">#{Package\Integration Dimensions\CompDiplomes.Inputs[Entrée droite de jointure de fusion].Columns[IdDiplome]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -658,6 +676,11 @@
                       cachedLength="50"
                       cachedName="domaine"
                       lineageId="Package\Integration Dimensions\TriDisciplines.Outputs[Sortie de tri].Columns[domaine]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\Integration Dimensions\TriDisciplines.Outputs[Sortie de tri].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -764,6 +787,19 @@
                           name="InputColumnID">#{Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion].Columns[domaine]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -814,6 +850,11 @@
                       cachedLength="50"
                       cachedName="academie"
                       lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[academie]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -918,6 +959,19 @@
                           dataType="System.Int32"
                           description="Colonne d'entrée associée à cette colonne de sortie"
                           name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée droite de jointure de fusion].Columns[NomAcademie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion].Columns[Date]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2089,6 +2143,11 @@
                       cachedName="annee"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Integration Dimensions\TriTemps.Outputs[Sortie de tri].Columns[annee]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\Integration Dimensions\TriTemps.Outputs[Sortie de tri].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2158,6 +2217,19 @@
                           name="InputColumnID">#{Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[annee]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2181,7 +2253,7 @@
                   description="Commande SQL à exécuter."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimDiplomes SET NomDiplome = ? WHERE IdDiplome = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimDiplomes SET NomDiplome = ?, DateExecution = ? WHERE IdDiplome = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -2212,10 +2284,16 @@
                       externalMetadataColumnId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[NomDiplome]" />
                     <inputColumn
+                      refId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[Date]" />
+                    <inputColumn
                       refId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].Columns[IdDiplomeCourant]"
                       cachedDataType="i4"
                       cachedName="IdDiplomeCourant"
-                      externalMetadataColumnId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
                       lineageId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[IdDiplomeCourant]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -2234,8 +2312,19 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2296,7 +2385,7 @@
                   description="Commande SQL à exécuter."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimDisciplines SET NomDiscipline = ?, NomDomaine = ? WHERE IdDiscipline = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimDisciplines SET NomDiscipline = ?, NomDomaine = ?, DateExecution = ? WHERE IdDiscipline = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -2322,7 +2411,7 @@
                       refId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].Columns[IdDisciplineCourant]"
                       cachedDataType="i4"
                       cachedName="IdDisciplineCourant"
-                      externalMetadataColumnId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_3]"
                       lineageId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[IdDisciplineCourant]" />
                     <inputColumn
                       refId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].Columns[NomDiscipline]"
@@ -2339,6 +2428,12 @@
                       cachedName="NomDomaine"
                       externalMetadataColumnId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[NomDomaine]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2368,8 +2463,19 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2430,7 +2536,7 @@
                   description="Commande SQL à exécuter."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimLieux SET NomEtablissement = ?,  NomAcademie = ? WHERE IdLieu = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimLieux SET NomEtablissement = ?,  NomAcademie = ?, DateExecution = ? WHERE IdLieu = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -2468,10 +2574,16 @@
                       externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]" />
                     <inputColumn
+                      refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[Date]" />
+                    <inputColumn
                       refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].Columns[IdLieuCourant]"
                       cachedDataType="i4"
                       cachedName="IdLieuCourant"
-                      externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_3]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[IdLieuCourant]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -2502,8 +2614,19 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2564,7 +2687,7 @@
                   description="Commande SQL à exécuter."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimTemps SET AnneeTemps = ? WHERE IdTemps = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimTemps SET AnneeTemps = ?, DateExecution = ? WHERE IdTemps = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -2587,18 +2710,24 @@
                   name="Entrée de commande OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].Columns[IdTempsCourant]"
-                      cachedDataType="i4"
-                      cachedName="IdTempsCourant"
-                      externalMetadataColumnId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
-                      lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[IdTempsCourant]" />
-                    <inputColumn
                       refId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].Columns[AnneeTemps]"
                       cachedDataType="i4"
                       cachedName="AnneeTemps"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[AnneeTemps]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].Columns[IdTempsCourant]"
+                      cachedDataType="i4"
+                      cachedName="IdTempsCourant"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[IdTempsCourant]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2615,8 +2744,19 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\Maj Temps.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2674,16 +2814,17 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Multidiffusion sortie 1]"
+                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 2]"
+                  dangling="true"
                   deleteOutputOnPathDetached="true"
-                  name="Multidiffusion sortie 1"
+                  name="Sortie de multidiffusion 2"
                   synchronousInputId="Package\Integration Dimensions\Multidiffusion.Inputs[Multidiffusion entrée 1]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 1]"
+                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Multidiffusion sortie 1]"
                   deleteOutputOnPathDetached="true"
-                  name="Sortie de multidiffusion 1"
+                  name="Multidiffusion sortie 1"
                   synchronousInputId="Package\Integration Dimensions\Multidiffusion.Inputs[Multidiffusion entrée 1]">
                   <externalMetadataColumns />
                 </output>
@@ -2702,10 +2843,9 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 2]"
-                  dangling="true"
+                  refId="Package\Integration Dimensions\Multidiffusion.Outputs[Sortie de multidiffusion 1]"
                   deleteOutputOnPathDetached="true"
-                  name="Sortie de multidiffusion 2"
+                  name="Sortie de multidiffusion 1"
                   synchronousInputId="Package\Integration Dimensions\Multidiffusion.Inputs[Multidiffusion entrée 1]">
                   <externalMetadataColumns />
                 </output>
@@ -2791,6 +2931,12 @@
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\New Diplome.Inputs[Entrée de destination OLE DB].ExternalColumns[NomDiplome]"
                       lineageId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[NomDiplome]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\New Diplome.Inputs[Entrée de destination OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\New Diplome.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2803,6 +2949,10 @@
                       dataType="wstr"
                       length="50"
                       name="NomDiplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\New Diplome.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2918,6 +3068,12 @@
                       cachedName="NomDomaine"
                       externalMetadataColumnId="Package\Integration Dimensions\New Discipline.Inputs[Entrée de destination OLE DB].ExternalColumns[NomDomaine]"
                       lineageId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[NomDomaine]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\New Discipline.Inputs[Entrée de destination OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\New Discipline.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2935,6 +3091,10 @@
                       dataType="wstr"
                       length="100"
                       name="NomDomaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\New Discipline.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3050,6 +3210,12 @@
                       cachedName="NomAcademie"
                       externalMetadataColumnId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB].ExternalColumns[NomAcademie]"
                       lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[NomAcademie]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\CompLieux.Outputs[Sortie de jointure de fusion].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3067,6 +3233,10 @@
                       dataType="wstr"
                       length="50"
                       name="NomAcademie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3174,6 +3344,12 @@
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB].ExternalColumns[AnneeTemps]"
                       lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[AnneeTemps]" />
+                    <inputColumn
+                      refId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3185,6 +3361,10 @@
                       refId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB].ExternalColumns[AnneeTemps]"
                       dataType="i4"
                       name="AnneeTemps" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbDate"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3766,6 +3946,15 @@ ORDER BY NomDiplome</property>
                       name="NomDiplome"
                       sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3778,6 +3967,10 @@ ORDER BY NomDiplome</property>
                       dataType="wstr"
                       length="50"
                       name="NomDiplome" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3796,6 +3989,11 @@ ORDER BY NomDiplome</property>
                       length="50"
                       lineageId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[NomDiplome]"
                       name="NomDiplome" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution" />
                     <outputColumn
                       refId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -4376,6 +4574,15 @@ ORDER BY NomDiscipline</property>
                       lineageId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB].Columns[NomDomaine]"
                       name="NomDomaine"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4393,6 +4600,10 @@ ORDER BY NomDiscipline</property>
                       dataType="wstr"
                       length="100"
                       name="NomDomaine" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4417,6 +4628,11 @@ ORDER BY NomDiscipline</property>
                       length="100"
                       lineageId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie d'erreur de source OLE DB].Columns[NomDomaine]"
                       name="NomDomaine" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution" />
                     <outputColumn
                       refId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -4997,6 +5213,15 @@ ORDER BY NomEtablissement</property>
                       lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[NomAcademie]"
                       name="NomAcademie"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5014,6 +5239,10 @@ ORDER BY NomEtablissement</property>
                       dataType="wstr"
                       length="50"
                       name="NomAcademie" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5038,6 +5267,11 @@ ORDER BY NomEtablissement</property>
                       length="50"
                       lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[NomAcademie]"
                       name="NomAcademie" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution" />
                     <outputColumn
                       refId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -5605,6 +5839,15 @@ ORDER BY NomEtablissement</property>
                       name="AnneeTemps"
                       sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5616,6 +5859,10 @@ ORDER BY NomEtablissement</property>
                       refId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB].ExternalColumns[AnneeTemps]"
                       dataType="i4"
                       name="AnneeTemps" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5633,6 +5880,11 @@ ORDER BY NomEtablissement</property>
                       dataType="i4"
                       lineageId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[AnneeTemps]"
                       name="AnneeTemps" />
+                    <outputColumn
+                      refId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[DateExecution]"
+                      name="DateExecution" />
                     <outputColumn
                       refId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -5659,19 +5911,19 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\C_U_Disciplines.Outputs[Create]" />
             <path
               refId="Package\Integration Dimensions.Paths[Create1]"
+              endId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB]"
+              name="Create"
+              startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Create]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Create2]"
               endId="Package\Integration Dimensions\New Diplome.Inputs[Entrée de destination OLE DB]"
               name="Create"
               startId="Package\Integration Dimensions\C_U_Diplomes.Outputs[Create]" />
             <path
-              refId="Package\Integration Dimensions.Paths[Create2]"
+              refId="Package\Integration Dimensions.Paths[Create3]"
               endId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB]"
               name="Create"
               startId="Package\Integration Dimensions\C_U_Temps.Outputs[Create]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Create3]"
-              endId="Package\Integration Dimensions\New Lieu.Inputs[Entrée de destination OLE DB]"
-              name="Create"
-              startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Create]" />
             <path
               refId="Package\Integration Dimensions.Paths[Multidiffusion sortie 1]"
               endId="Package\Integration Dimensions\TriDisciplines.Inputs[Entrée de tri]"
@@ -5684,9 +5936,9 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\Horodatage.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
-              endId="Package\Integration Dimensions\C_U_Diplomes.Inputs[Entrée de fractionnement conditionnel]"
+              endId="Package\Integration Dimensions\C_U_Disciplines.Inputs[Entrée de fractionnement conditionnel]"
               name="Sortie de jointure de fusion"
-              startId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion]" />
+              startId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion1]"
               endId="Package\Integration Dimensions\C_U_Temps.Inputs[Entrée de fractionnement conditionnel]"
@@ -5694,9 +5946,9 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\Jointure de fusion.Outputs[Sortie de jointure de fusion]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion2]"
-              endId="Package\Integration Dimensions\C_U_Disciplines.Inputs[Entrée de fractionnement conditionnel]"
+              endId="Package\Integration Dimensions\C_U_Diplomes.Inputs[Entrée de fractionnement conditionnel]"
               name="Sortie de jointure de fusion"
-              startId="Package\Integration Dimensions\CompDisciplines.Outputs[Sortie de jointure de fusion]" />
+              startId="Package\Integration Dimensions\CompDiplomes.Outputs[Sortie de jointure de fusion]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
               endId="Package\Integration Dimensions\C_U_Lieux.Inputs[Entrée de fractionnement conditionnel]"
@@ -5729,14 +5981,14 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\TriLieuxCourants.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB1]"
-              endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée droite de jointure de fusion]"
-              name="Sortie de source OLE DB"
-              startId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie de source OLE DB]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB2]"
               endId="Package\Integration Dimensions\CompDisciplines.Inputs[Entrée droite de jointure de fusion]"
               name="Sortie de source OLE DB"
               startId="Package\Integration Dimensions\TriDisciplinesCourantes.Outputs[Sortie de source OLE DB]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB2]"
+              endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée droite de jointure de fusion]"
+              name="Sortie de source OLE DB"
+              startId="Package\Integration Dimensions\TriDiplomesCourants.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
               endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée droite de jointure de fusion]"
@@ -5744,14 +5996,14 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\TriTempsCourants.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de tri]"
-              endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion]"
-              name="Sortie de tri"
-              startId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri]" />
-            <path
-              refId="Package\Integration Dimensions.Paths[Sortie de tri1]"
               endId="Package\Integration Dimensions\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
               startId="Package\Integration Dimensions\TriTemps.Outputs[Sortie de tri]" />
+            <path
+              refId="Package\Integration Dimensions.Paths[Sortie de tri1]"
+              endId="Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion]"
+              name="Sortie de tri"
+              startId="Package\Integration Dimensions\TriDisciplines.Outputs[Sortie de tri]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de tri2]"
               endId="Package\Integration Dimensions\CompLieux.Inputs[Entrée gauche de jointure de fusion]"
@@ -5759,14 +6011,14 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\TriLieux.Outputs[Sortie de tri]" />
             <path
               refId="Package\Integration Dimensions.Paths[Sortie de tri3]"
-              endId="Package\Integration Dimensions\CompDisciplines.Inputs[Entrée gauche de jointure de fusion]"
+              endId="Package\Integration Dimensions\CompDiplomes.Inputs[Entrée gauche de jointure de fusion]"
               name="Sortie de tri"
-              startId="Package\Integration Dimensions\TriDisciplines.Outputs[Sortie de tri]" />
+              startId="Package\Integration Dimensions\TriDiplomes.Outputs[Sortie de tri]" />
             <path
               refId="Package\Integration Dimensions.Paths[Update]"
-              endId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB]"
+              endId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB]"
               name="Update"
-              startId="Package\Integration Dimensions\C_U_Disciplines.Outputs[Update]" />
+              startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Update]" />
             <path
               refId="Package\Integration Dimensions.Paths[Update1]"
               endId="Package\Integration Dimensions\Maj Diplome.Inputs[Entrée de commande OLE DB]"
@@ -5779,9 +6031,9 @@ ORDER BY NomEtablissement</property>
               startId="Package\Integration Dimensions\C_U_Temps.Outputs[Update]" />
             <path
               refId="Package\Integration Dimensions.Paths[Update3]"
-              endId="Package\Integration Dimensions\Maj Lieu.Inputs[Entrée de commande OLE DB]"
+              endId="Package\Integration Dimensions\Maj Discipline.Inputs[Entrée de commande OLE DB]"
               name="Update"
-              startId="Package\Integration Dimensions\C_U_Lieux.Outputs[Update]" />
+              startId="Package\Integration Dimensions\C_U_Disciplines.Outputs[Update]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -6916,6 +7168,79 @@ ORDER BY NomEtablissement</property>
               </outputs>
             </component>
             <component
+              refId="Package\Integration Fait\Horodatage"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Horodatage"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Integration Fait\Horodatage.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Integration Fait\Horodatage.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\Horodatage.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\Horodatage.Outputs[Sortie de colonne dérivée].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Integration Fait\Horodatage.Outputs[Sortie de colonne dérivée].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Integration Fait\Horodatage.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Integration Fait\Horodatage.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Integration Fait\Horodatage.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Horodatage.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Integration Fait\Horodatage.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Integration Fait\Horodatage.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Integration Fait\New Fact"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
@@ -7048,6 +7373,12 @@ ORDER BY NomEtablissement</property>
                       cachedName="cle_disc"
                       externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[cle_disc]"
                       lineageId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat].Columns[cle_disc]" />
+                    <inputColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      lineageId="Package\Integration Fait\Horodatage.Outputs[Sortie de colonne dérivée].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7092,6 +7423,10 @@ ORDER BY NomEtablissement</property>
                       dataType="wstr"
                       length="10"
                       name="cle_disc" />
+                    <externalMetadataColumn
+                      refId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
+                      dataType="dbTimeStamp"
+                      name="DateExecution" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7773,6 +8108,11 @@ where [refTable].[AnneeTemps] = ?</property>
               name="Sortie de colonne dérivée"
               startId="Package\Integration Fait\Filtrage des données  (TauxReponses).Outputs[Sortie de colonne dérivée]" />
             <path
+              refId="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
+              endId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Integration Fait\Horodatage.Outputs[Sortie de colonne dérivée]" />
+            <path
               refId="Package\Integration Fait.Paths[Sortie de conversion de données]"
               endId="Package\Integration Fait\New Fact.Inputs[Entrée de destination OLE DB]"
               name="Sortie de conversion de données"
@@ -7799,7 +8139,7 @@ where [refTable].[AnneeTemps] = ?</property>
               startId="Package\Integration Fait\RechercheTemps.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
-              endId="Package\Integration Fait\RechercheDiscipline.Inputs[Entrée de recherche]"
+              endId="Package\Integration Fait\Horodatage.Inputs[Entrée de colonne dérivée]"
               name="Sortie de source de fichier plat"
               startId="Package\Integration Fait\CSV Source.Outputs[Sortie de source de fichier plat]" />
           </paths>
@@ -7836,17 +8176,13 @@ where [refTable].[AnneeTemps] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="147,42"
-          Id="Package\Integration Dimensions\Maj Discipline"
-          TopLeft="327,574" />
+          Size="145,42"
+          Id="Package\Integration Dimensions\TriDisciplines"
+          TopLeft="154.613088326351,292.614031874876" />
         <NodeLayout
-          Size="126,42"
-          Id="Package\Integration Dimensions\TriTemps"
-          TopLeft="1405,293" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Integration Dimensions\New Discipline"
-          TopLeft="152,574" />
+          Size="163,42"
+          Id="Package\Integration Dimensions\TriLieuxCourants"
+          TopLeft="1154,295" />
         <NodeLayout
           Size="160,42"
           Id="Package\Integration Dimensions\C_U_Disciplines"
@@ -7856,73 +8192,61 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Dimensions\Maj Diplome"
           TopLeft="740,572" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Integration Dimensions\TriTempsCourants"
-          TopLeft="1551,293" />
-        <NodeLayout
-          Size="102,42"
-          Id="Package\Integration Dimensions\CSV"
-          TopLeft="865.999985896051,6.86842100780427" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Integration Dimensions\TriDisciplines"
-          TopLeft="154.613088326351,292.614031874876" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Integration Dimensions\New Diplome"
-          TopLeft="578,572" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Integration Dimensions\C_U_Diplomes"
-          TopLeft="664,457" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Integration Dimensions\TriLieuxCourants"
-          TopLeft="1154,295" />
+          Size="182,42"
+          Id="Package\Integration Dimensions\TriDiplomesCourants"
+          TopLeft="751,293" />
         <NodeLayout
           Size="138,42"
           Id="Package\Integration Dimensions\TriDiplomes"
           TopLeft="592.267842155216,293.268168367283" />
         <NodeLayout
-          Size="143,43"
-          Id="Package\Integration Dimensions\Multidiffusion"
-          TopLeft="847.553555131757,148.496239552974" />
+          Size="144,42"
+          Id="Package\Integration Dimensions\New Diplome"
+          TopLeft="578,572" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Integration Dimensions\CSV"
+          TopLeft="865.999985896051,6.86842100780427" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Integration Dimensions\C_U_Diplomes"
+          TopLeft="664,457" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Integration Dimensions\Jointure de fusion"
+          TopLeft="1457,375" />
         <NodeLayout
           Size="195,42"
           Id="Package\Integration Dimensions\TriDisciplinesCourantes"
           TopLeft="323,293" />
         <NodeLayout
+          Size="138,42"
+          Id="Package\Integration Dimensions\New Temps"
+          TopLeft="1392,565" />
+        <NodeLayout
           Size="136,43"
           Id="Package\Integration Dimensions\Horodatage"
           TopLeft="851.749983515591,78.3157886247721" />
         <NodeLayout
-          Size="135,42"
-          Id="Package\Integration Dimensions\CompLieux"
-          TopLeft="1075,379" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Integration Dimensions\TriDiplomesCourants"
-          TopLeft="751,293" />
+          Size="170,42"
+          Id="Package\Integration Dimensions\TriTempsCourants"
+          TopLeft="1551,293" />
         <NodeLayout
           Size="133,42"
           Id="Package\Integration Dimensions\Maj Temps"
           TopLeft="1557,565" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\Integration Dimensions\New Temps"
-          TopLeft="1392,565" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Integration Dimensions\TriLieux"
-          TopLeft="1014,294" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Integration Dimensions\C_U_Temps"
-          TopLeft="1467,458" />
+          Size="135,42"
+          Id="Package\Integration Dimensions\CompLieux"
+          TopLeft="1075,379" />
         <NodeLayout
           Size="161,42"
           Id="Package\Integration Dimensions\CompDisciplines"
           TopLeft="230,377" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Integration Dimensions\C_U_Temps"
+          TopLeft="1467,458" />
         <NodeLayout
           Size="121,42"
           Id="Package\Integration Dimensions\Maj Lieu"
@@ -7932,50 +8256,66 @@ where [refTable].[AnneeTemps] = ?</property>
           Id="Package\Integration Dimensions\New Lieu"
           TopLeft="1003,572" />
         <NodeLayout
+          Size="143,43"
+          Id="Package\Integration Dimensions\Multidiffusion"
+          TopLeft="847.553555131757,148.496239552974" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Integration Dimensions\TriTemps"
+          TopLeft="1405,293" />
+        <NodeLayout
           Size="133,42"
           Id="Package\Integration Dimensions\C_U_Lieux"
           TopLeft="1075,459" />
         <NodeLayout
-          Size="166,42"
-          Id="Package\Integration Dimensions\Jointure de fusion"
-          TopLeft="1457,375" />
+          Size="118,42"
+          Id="Package\Integration Dimensions\TriLieux"
+          TopLeft="1014,294" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Integration Dimensions\Maj Discipline"
+          TopLeft="327,574" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Integration Dimensions\New Discipline"
+          TopLeft="152,574" />
         <NodeLayout
           Size="154,42"
           Id="Package\Integration Dimensions\CompDiplomes"
           TopLeft="662,378" />
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update3]"
-          TopLeft="1162.33333333333,501">
+          TopLeft="336.657406010423,499.452239111068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.1666666666667,71"
+              EndConnector="63.8425939895767,74.547760888932"
               Start="0,0"
-              End="48.1666666666667,63.5">
+              End="63.8425939895767,67.047760888932">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.9063893016345" />
+                    End="0,26.2619623410516" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.9063893016345"
-                    Point2="0,28.9063893016345"
-                    Point3="4,28.9063893016345" />
+                    Point1="0,26.2619623410516"
+                    Point2="0,30.2619623410516"
+                    Point3="4,30.2619623410516" />
                   <mssgle:LineSegment
-                    End="44.1666666666667,28.9063893016345" />
+                    End="59.8425939895767,30.2619623410516" />
                   <mssgle:CubicBezierSegment
-                    Point1="44.1666666666667,28.9063893016345"
-                    Point2="48.1666666666667,28.9063893016345"
-                    Point3="48.1666666666667,32.9063893016345" />
+                    Point1="59.8425939895767,30.2619623410516"
+                    Point2="63.8425939895767,30.2619623410516"
+                    Point3="63.8425939895767,34.2619623410516" />
                   <mssgle:LineSegment
-                    End="48.1666666666667,63.5" />
+                    End="63.8425939895767,67.047760888932" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="7.80304036458337,33.9063893016345,32.5605859375,11.609375"
+              BoundingBox="15.6410040260383,35.2619623410516,32.5605859375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8053,66 +8393,66 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update]"
-          TopLeft="336.657406010423,499.452239111068">
+          TopLeft="1162.33333333333,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.8425939895767,74.547760888932"
+              EndConnector="48.1666666666667,71"
               Start="0,0"
-              End="63.8425939895767,67.047760888932">
+              End="48.1666666666667,63.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.2619623410516" />
+                    End="0,24.9063893016345" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.2619623410516"
-                    Point2="0,30.2619623410516"
-                    Point3="4,30.2619623410516" />
+                    Point1="0,24.9063893016345"
+                    Point2="0,28.9063893016345"
+                    Point3="4,28.9063893016345" />
                   <mssgle:LineSegment
-                    End="59.8425939895767,30.2619623410516" />
+                    End="44.1666666666667,28.9063893016345" />
                   <mssgle:CubicBezierSegment
-                    Point1="59.8425939895767,30.2619623410516"
-                    Point2="63.8425939895767,30.2619623410516"
-                    Point3="63.8425939895767,34.2619623410516" />
+                    Point1="44.1666666666667,28.9063893016345"
+                    Point2="48.1666666666667,28.9063893016345"
+                    Point3="48.1666666666667,32.9063893016345" />
                   <mssgle:LineSegment
-                    End="63.8425939895767,67.047760888932" />
+                    End="48.1666666666667,63.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.6410040260383,35.2619623410516,32.5605859375,11.609375"
+              BoundingBox="7.80304036458337,33.9063893016345,32.5605859375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri3]"
-          TopLeft="227.113088326351,334.614031874876">
+          TopLeft="661.267842155216,335.268168367283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.886911673649,42.385968125124"
+              EndConnector="53.3988245114506,42.731831632717"
               Start="0,0"
-              End="57.886911673649,34.885968125124">
+              End="53.3988245114506,35.231831632717">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.1813316167711" />
+                    End="0,21.375457859017" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.1813316167711"
-                    Point2="0,25.1813316167711"
-                    Point3="4,25.1813316167711" />
+                    Point1="0,21.375457859017"
+                    Point2="0,25.375457859017"
+                    Point3="4,25.375457859017" />
                   <mssgle:LineSegment
-                    End="53.886911673649,25.1813316167711" />
+                    End="49.3988245114506,25.375457859017" />
                   <mssgle:CubicBezierSegment
-                    Point1="53.886911673649,25.1813316167711"
-                    Point2="57.886911673649,25.1813316167711"
-                    Point3="57.886911673649,29.1813316167711" />
+                    Point1="49.3988245114506,25.375457859017"
+                    Point2="53.3988245114506,25.375457859017"
+                    Point3="53.3988245114506,29.375457859017" />
                   <mssgle:LineSegment
-                    End="57.886911673649,34.885968125124" />
+                    End="53.3988245114506,35.231831632717" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8157,6 +8497,40 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri1]"
+          TopLeft="227.113088326351,334.614031874876">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="57.886911673649,42.385968125124"
+              Start="0,0"
+              End="57.886911673649,34.885968125124">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1813316167711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1813316167711"
+                    Point2="0,25.1813316167711"
+                    Point3="4,25.1813316167711" />
+                  <mssgle:LineSegment
+                    End="53.886911673649,25.1813316167711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.886911673649,25.1813316167711"
+                    Point2="57.886911673649,25.1813316167711"
+                    Point3="57.886911673649,29.1813316167711" />
+                  <mssgle:LineSegment
+                    End="57.886911673649,34.885968125124" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de tri]"
           TopLeft="1468,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8181,40 +8555,6 @@ where [refTable].[AnneeTemps] = ?</property>
                     Point3="45.6666666666667,27.7708830548926" />
                   <mssgle:LineSegment
                     End="45.6666666666667,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de tri]"
-          TopLeft="661.267842155216,335.268168367283">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.3988245114506,42.731831632717"
-              Start="0,0"
-              End="53.3988245114506,35.231831632717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.375457859017" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.375457859017"
-                    Point2="0,25.375457859017"
-                    Point3="4,25.375457859017" />
-                  <mssgle:LineSegment
-                    End="49.3988245114506,25.375457859017" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.3988245114506,25.375457859017"
-                    Point2="53.3988245114506,25.375457859017"
-                    Point3="53.3988245114506,29.375457859017" />
-                  <mssgle:LineSegment
-                    End="53.3988245114506,35.231831632717" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8259,40 +8599,6 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB2]"
-          TopLeft="420.5,335">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-84.5,42"
-              Start="0,0"
-              End="-84.5,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.9520295202952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.9520295202952"
-                    Point2="0,24.9520295202952"
-                    Point3="-4,24.9520295202952" />
-                  <mssgle:LineSegment
-                    End="-80.5,24.9520295202952" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-80.5,24.9520295202952"
-                    Point2="-84.5,24.9520295202952"
-                    Point3="-84.5,28.9520295202952" />
-                  <mssgle:LineSegment
-                    End="-84.5,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB1]"
           TopLeft="842,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8317,6 +8623,40 @@ where [refTable].[AnneeTemps] = ?</property>
                     Point3="-78.6666666666666,29.53470437018" />
                   <mssgle:LineSegment
                     End="-78.6666666666666,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB1]"
+          TopLeft="420.5,335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.5,42"
+              Start="0,0"
+              End="-84.5,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9520295202952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9520295202952"
+                    Point2="0,24.9520295202952"
+                    Point3="-4,24.9520295202952" />
+                  <mssgle:LineSegment
+                    End="-80.5,24.9520295202952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.5,24.9520295202952"
+                    Point2="-84.5,24.9520295202952"
+                    Point3="-84.5,28.9520295202952" />
+                  <mssgle:LineSegment
+                    End="-84.5,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8507,18 +8847,18 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion2]"
-          TopLeft="310.912036338545,419">
+          TopLeft="739.75,420">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.452239111068"
+              EndConnector="0,37"
               Start="0,0"
-              End="0,30.952239111068">
+              End="0,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.952239111068" />
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8551,18 +8891,18 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
-          TopLeft="739.75,420">
+          TopLeft="310.912036338545,419">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,38.452239111068"
               Start="0,0"
-              End="0,29.5">
+              End="0,30.952239111068">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,30.952239111068" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8629,42 +8969,6 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Create3]"
-          TopLeft="1120.66666666667,501">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-55.1666666666667,71"
-              Start="0,0"
-              End="-55.1666666666667,63.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.9063893016345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.9063893016345"
-                    Point2="0,28.9063893016345"
-                    Point3="-4,28.9063893016345" />
-                  <mssgle:LineSegment
-                    End="-51.1666666666667,28.9063893016345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-51.1666666666667,28.9063893016345"
-                    Point2="-55.1666666666667,28.9063893016345"
-                    Point3="-55.1666666666667,32.9063893016345" />
-                  <mssgle:LineSegment
-                    End="-55.1666666666667,63.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-42.6522005208334,33.9063893016345,30.137734375,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Create2]"
           TopLeft="1537.5,500">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8700,7 +9004,7 @@ where [refTable].[AnneeTemps] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Dimensions.Paths[Create1]"
+          Id="Package\Integration Dimensions.Paths[Create2]"
           TopLeft="716.333333333333,499">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8732,6 +9036,42 @@ where [refTable].[AnneeTemps] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-48.2355338541667,34.6532988357051,30.137734375,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Dimensions.Paths[Create1]"
+          TopLeft="1120.66666666667,501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-55.1666666666667,71"
+              Start="0,0"
+              End="-55.1666666666667,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9063893016345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9063893016345"
+                    Point2="0,28.9063893016345"
+                    Point3="-4,28.9063893016345" />
+                  <mssgle:LineSegment
+                    End="-51.1666666666667,28.9063893016345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51.1666666666667,28.9063893016345"
+                    Point2="-55.1666666666667,28.9063893016345"
+                    Point3="-55.1666666666667,32.9063893016345" />
+                  <mssgle:LineSegment
+                    End="-55.1666666666667,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-42.6522005208333,33.9063893016345,30.137734375,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8775,53 +9115,6 @@ where [refTable].[AnneeTemps] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\New Discipline">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriTempsCourants">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\New Diplome">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriLieuxCourants">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\TriDisciplinesCourantes">
     <Properties>
       <Property>
@@ -8830,33 +9123,20 @@ where [refTable].[AnneeTemps] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\TriDiplomesCourants">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Dimensions\New Temps">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Integration Dimensions\New Lieu">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Dimensions\New Discipline">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8874,157 +9154,45 @@ where [refTable].[AnneeTemps] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="173,42"
-          Id="Package\Integration Fait\RechercheDiplome"
-          TopLeft="634.333333333333,269.333333333333" />
-        <NodeLayout
-          Size="125,42"
-          Id="Package\Integration Fait\New Fact"
-          TopLeft="659,709" />
-        <NodeLayout
           Size="554,42"
           Id="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses)"
           TopLeft="448.666666666667,500.666666666666" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Integration Fait\CSV Source"
-          TopLeft="649.333333333333,121.333333333333" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Integration Fait\RechercheLieux"
-          TopLeft="640.833333333333,344" />
         <NodeLayout
           Size="141,42"
           Id="Package\Integration Fait\Erreurs CSV"
           TopLeft="654,788" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Integration Fait\RechercheDiscipline"
-          TopLeft="630.333333333333,190.333333333333" />
+          Size="139,42"
+          Id="Package\Integration Fait\CSV Source"
+          TopLeft="648.333333333333,33.333333333333" />
         <NodeLayout
           Size="166,42"
           Id="Package\Integration Fait\RechercheTemps"
           TopLeft="639,423" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Integration Fait\RechercheLieux"
+          TopLeft="640.833333333333,344" />
         <NodeLayout
           Size="269,42"
           Id="Package\Integration Fait\Filtrage des données  (TauxReponses)"
           TopLeft="586.307692307692,571.653846153846" />
         <NodeLayout
           Size="180,42"
+          Id="Package\Integration Fait\RechercheDiscipline"
+          TopLeft="630.333333333333,190.333333333333" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Integration Fait\RechercheDiplome"
+          TopLeft="634.333333333333,269.333333333333" />
+        <NodeLayout
+          Size="180,42"
           Id="Package\Integration Fait\Conversion en entier"
           TopLeft="635,641" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de conversion de données]"
-          TopLeft="723.25,683">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
-          TopLeft="722.903846153846,613.653846153846">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.346153846154"
-              Start="0,0"
-              End="0,19.846153846154">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.846153846154" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
-          TopLeft="723.237179487179,542.666666666666">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.9871794871799"
-              Start="0,0"
-              End="0,21.4871794871799">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.4871794871799" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
-          TopLeft="723,751">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-83.281484375,9.87548828125,166.56296875,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
-          TopLeft="719.583333333333,163.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Integration Fait\New Fact"
+          TopLeft="659,709" />
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
           TopLeft="723.833333333333,465">
@@ -9121,11 +9289,149 @@ where [refTable].[AnneeTemps] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de conversion de données]"
+          TopLeft="723.25,683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
+          TopLeft="722.903846153846,613.653846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.346153846154"
+              Start="0,0"
+              End="0,19.846153846154">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.846153846154" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
+          TopLeft="723.237179487179,542.666666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.9871794871799"
+              Start="0,0"
+              End="0,21.4871794871799">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4871794871799" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
+          TopLeft="723,751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-83.281484375,9.87548828125,166.56296875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="136,43"
+          Id="Package\Integration Fait\Horodatage"
+          TopLeft="653,111" />
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
+          TopLeft="719.416666666667,75.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.666666666667"
+              Start="0,0"
+              End="0,28.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
+          TopLeft="720.666666666667,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.333333333333"
+              Start="0,0"
+              End="0,28.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheDiplome">
+    design-time-name="Package\Integration Fait\RechercheTemps">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -9135,7 +9441,7 @@ where [refTable].[AnneeTemps] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[dbo].[DimTemps]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -9144,19 +9450,6 @@ where [refTable].[AnneeTemps] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\New Fact">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9207,7 +9500,7 @@ where [refTable].[AnneeTemps] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheTemps">
+    design-time-name="Package\Integration Fait\RechercheDiplome">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -9217,7 +9510,7 @@ where [refTable].[AnneeTemps] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimTemps]</Value>
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -9226,6 +9519,19 @@ where [refTable].[AnneeTemps] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\New Fact">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

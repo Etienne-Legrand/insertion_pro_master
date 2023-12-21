@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="210"
-  DTS:VersionGUID="{48C2C38A-86A5-4FFF-849C-F614A6093619}">
+  DTS:VersionBuild="214"
+  DTS:VersionGUID="{32AA2188-E6AC-49F0-87DE-8EFA4FE545D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3363,7 +3363,7 @@
                       name="AnneeTemps" />
                     <externalMetadataColumn
                       refId="Package\Integration Dimensions\New Temps.Inputs[Entrée de destination OLE DB].ExternalColumns[DateExecution]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="DateExecution" />
                   </externalMetadataColumns>
                 </input>
@@ -8147,6 +8147,16 @@ where [refTable].[AnneeTemps] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{F506B0FC-DE7E-42A4-862C-9F1F8081E8AA}"
+      DTS:From="Package\Integration Dimensions"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Integration Fait" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
 <!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
@@ -8158,7 +8168,7 @@ where [refTable].[AnneeTemps] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="189,43"
           Id="Package\Integration Dimensions"
@@ -8166,7 +8176,29 @@ where [refTable].[AnneeTemps] = ?</property>
         <NodeLayout
           Size="151,43"
           Id="Package\Integration Fait"
-          TopLeft="240.624989243225,21.2105260829021" />
+          TopLeft="294.624989243225,24.2105260829021" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="194.5,43.8815787482873">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100.124989243225,0"
+              Start="0,0"
+              End="92.624989243225,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.624989243225,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8176,116 +8208,116 @@ where [refTable].[AnneeTemps] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145,42"
-          Id="Package\Integration Dimensions\TriDisciplines"
-          TopLeft="154.613088326351,292.614031874876" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Integration Dimensions\TriLieuxCourants"
-          TopLeft="1154,295" />
+          Size="138,42"
+          Id="Package\Integration Dimensions\TriDiplomes"
+          TopLeft="538.517842155216,472.018168367283" />
         <NodeLayout
           Size="160,42"
           Id="Package\Integration Dimensions\C_U_Disciplines"
-          TopLeft="231.32407267709,457.452239111068" />
+          TopLeft="177.57407267709,636.202239111068" />
         <NodeLayout
           Size="179,42"
           Id="Package\Integration Dimensions\Maj Diplome"
-          TopLeft="740,572" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Integration Dimensions\TriDiplomesCourants"
-          TopLeft="751,293" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Integration Dimensions\TriDiplomes"
-          TopLeft="592.267842155216,293.268168367283" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Integration Dimensions\New Diplome"
-          TopLeft="578,572" />
-        <NodeLayout
-          Size="102,42"
-          Id="Package\Integration Dimensions\CSV"
-          TopLeft="865.999985896051,6.86842100780427" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Integration Dimensions\C_U_Diplomes"
-          TopLeft="664,457" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Integration Dimensions\Jointure de fusion"
-          TopLeft="1457,375" />
+          TopLeft="686.25,750.75" />
         <NodeLayout
           Size="195,42"
           Id="Package\Integration Dimensions\TriDisciplinesCourantes"
-          TopLeft="323,293" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Integration Dimensions\New Temps"
-          TopLeft="1392,565" />
-        <NodeLayout
-          Size="136,43"
-          Id="Package\Integration Dimensions\Horodatage"
-          TopLeft="851.749983515591,78.3157886247721" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Integration Dimensions\TriTempsCourants"
-          TopLeft="1551,293" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Integration Dimensions\Maj Temps"
-          TopLeft="1557,565" />
-        <NodeLayout
-          Size="135,42"
-          Id="Package\Integration Dimensions\CompLieux"
-          TopLeft="1075,379" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Integration Dimensions\CompDisciplines"
-          TopLeft="230,377" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Integration Dimensions\C_U_Temps"
-          TopLeft="1467,458" />
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Integration Dimensions\Maj Lieu"
-          TopLeft="1150,572" />
-        <NodeLayout
-          Size="125,42"
-          Id="Package\Integration Dimensions\New Lieu"
-          TopLeft="1003,572" />
+          TopLeft="269.25,471.75" />
         <NodeLayout
           Size="143,43"
           Id="Package\Integration Dimensions\Multidiffusion"
-          TopLeft="847.553555131757,148.496239552974" />
+          TopLeft="793.803555131757,327.246239552974" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Integration Dimensions\CSV"
+          TopLeft="812.249985896051,185.618421007804" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Integration Dimensions\TriDiplomesCourants"
+          TopLeft="697.25,471.75" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Integration Dimensions\New Diplome"
+          TopLeft="524.25,750.75" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Integration Dimensions\C_U_Diplomes"
+          TopLeft="610.25,635.75" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Integration Dimensions\New Temps"
+          TopLeft="1338.25,743.75" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Integration Dimensions\Jointure de fusion"
+          TopLeft="1403.25,553.75" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Integration Dimensions\Maj Temps"
+          TopLeft="1503.25,743.75" />
+        <NodeLayout
+          Size="136,43"
+          Id="Package\Integration Dimensions\Horodatage"
+          TopLeft="797.999983515591,257.065788624772" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Integration Dimensions\CompLieux"
+          TopLeft="1021.25,557.75" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Integration Dimensions\New Lieu"
+          TopLeft="949.25,750.75" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Integration Dimensions\C_U_Temps"
+          TopLeft="1413.25,636.75" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Integration Dimensions\Maj Lieu"
+          TopLeft="1096.25,750.75" />
         <NodeLayout
           Size="126,42"
           Id="Package\Integration Dimensions\TriTemps"
-          TopLeft="1405,293" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Integration Dimensions\C_U_Lieux"
-          TopLeft="1075,459" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Integration Dimensions\TriLieux"
-          TopLeft="1014,294" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\Integration Dimensions\Maj Discipline"
-          TopLeft="327,574" />
+          TopLeft="1351.25,471.75" />
         <NodeLayout
           Size="151,42"
           Id="Package\Integration Dimensions\New Discipline"
-          TopLeft="152,574" />
+          TopLeft="98.25,752.75" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Integration Dimensions\CompDisciplines"
+          TopLeft="176.25,555.75" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Integration Dimensions\TriLieux"
+          TopLeft="960.25,472.75" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Integration Dimensions\TriTempsCourants"
+          TopLeft="1497.25,471.75" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Integration Dimensions\C_U_Lieux"
+          TopLeft="1021.25,637.75" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Integration Dimensions\Maj Discipline"
+          TopLeft="273.25,752.75" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Integration Dimensions\TriDisciplines"
+          TopLeft="100.863088326351,471.364031874876" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Integration Dimensions\TriLieuxCourants"
+          TopLeft="1100.25,473.75" />
         <NodeLayout
           Size="154,42"
           Id="Package\Integration Dimensions\CompDiplomes"
-          TopLeft="662,378" />
+          TopLeft="608.25,556.75" />
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update3]"
-          TopLeft="336.657406010423,499.452239111068">
+          TopLeft="282.907406010423,678.202239111068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8321,7 +8353,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update2]"
-          TopLeft="1559.66666666667,500">
+          TopLeft="1505.91666666667,678.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8357,7 +8389,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update1]"
-          TopLeft="764.666666666667,499">
+          TopLeft="710.916666666667,677.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8393,7 +8425,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Update]"
-          TopLeft="1162.33333333333,501">
+          TopLeft="1108.58333333333,679.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8429,7 +8461,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri3]"
-          TopLeft="661.267842155216,335.268168367283">
+          TopLeft="607.517842155216,514.018168367283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8463,7 +8495,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri2]"
-          TopLeft="1073,336">
+          TopLeft="1019.25,514.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8497,7 +8529,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri1]"
-          TopLeft="227.113088326351,334.614031874876">
+          TopLeft="173.363088326351,513.364031874876">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8531,7 +8563,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de tri]"
-          TopLeft="1468,335">
+          TopLeft="1414.25,513.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8565,7 +8597,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB3]"
-          TopLeft="1636,335">
+          TopLeft="1582.25,513.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8599,7 +8631,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB2]"
-          TopLeft="842,335">
+          TopLeft="788.25,513.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8633,7 +8665,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB1]"
-          TopLeft="420.5,335">
+          TopLeft="366.75,513.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8644,17 +8676,17 @@ where [refTable].[AnneeTemps] = ?</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.9520295202952" />
+                    End="0,20.9520295202951" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.9520295202952"
-                    Point2="0,24.9520295202952"
-                    Point3="-4,24.9520295202952" />
+                    Point1="0,20.9520295202951"
+                    Point2="0,24.9520295202951"
+                    Point3="-4,24.9520295202951" />
                   <mssgle:LineSegment
-                    End="-80.5,24.9520295202952" />
+                    End="-80.5,24.9520295202951" />
                   <mssgle:CubicBezierSegment
-                    Point1="-80.5,24.9520295202952"
-                    Point2="-84.5,24.9520295202952"
-                    Point3="-84.5,28.9520295202952" />
+                    Point1="-80.5,24.9520295202951"
+                    Point2="-84.5,24.9520295202951"
+                    Point3="-84.5,28.9520295202951" />
                   <mssgle:LineSegment
                     End="-84.5,34.5" />
                 </mssgle:SegmentCollection>
@@ -8667,7 +8699,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source OLE DB]"
-          TopLeft="1235.5,337">
+          TopLeft="1181.75,515.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8678,17 +8710,17 @@ where [refTable].[AnneeTemps] = ?</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.904831625183" />
+                    End="0,20.9048316251831" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.904831625183"
-                    Point2="0,24.904831625183"
-                    Point3="-4,24.904831625183" />
+                    Point1="0,20.9048316251831"
+                    Point2="0,24.9048316251831"
+                    Point3="-4,24.9048316251831" />
                   <mssgle:LineSegment
-                    End="-67.8333333333333,24.904831625183" />
+                    End="-67.8333333333333,24.9048316251831" />
                   <mssgle:CubicBezierSegment
-                    Point1="-67.8333333333333,24.904831625183"
-                    Point2="-71.8333333333333,24.904831625183"
-                    Point3="-71.8333333333333,28.904831625183" />
+                    Point1="-67.8333333333333,24.9048316251831"
+                    Point2="-71.8333333333333,24.9048316251831"
+                    Point3="-71.8333333333333,28.9048316251831" />
                   <mssgle:LineSegment
                     End="-71.8333333333333,34.5" />
                 </mssgle:SegmentCollection>
@@ -8701,7 +8733,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de source de fichier plat]"
-          TopLeft="918.374984705821,48.8684210078043">
+          TopLeft="864.624984705821,227.618421007804">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8723,7 +8755,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 4]"
-          TopLeft="959.553555131757,191.496239552974">
+          TopLeft="905.803555131757,370.246239552974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8757,7 +8789,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 3]"
-          TopLeft="932.553555131757,191.496239552974">
+          TopLeft="878.803555131757,370.246239552974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8791,7 +8823,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de multidiffusion 1]"
-          TopLeft="905.553555131757,191.496239552974">
+          TopLeft="851.803555131757,370.246239552974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8825,7 +8857,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion3]"
-          TopLeft="1142,421">
+          TopLeft="1088.25,599.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8847,7 +8879,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion2]"
-          TopLeft="739.75,420">
+          TopLeft="686,598.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8869,7 +8901,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion1]"
-          TopLeft="1538.75,417">
+          TopLeft="1485,595.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8891,7 +8923,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de jointure de fusion]"
-          TopLeft="310.912036338545,419">
+          TopLeft="257.162036338545,597.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8913,7 +8945,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Sortie de colonne dérivée]"
-          TopLeft="919.318435990341,120.982455291439">
+          TopLeft="865.568435990341,299.732455291439">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8935,7 +8967,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Multidiffusion sortie 1]"
-          TopLeft="878.553555131757,191.496239552974">
+          TopLeft="824.803555131757,370.246239552974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8969,7 +9001,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Create3]"
-          TopLeft="1537.5,500">
+          TopLeft="1483.75,678.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9005,7 +9037,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Create2]"
-          TopLeft="716.333333333333,499">
+          TopLeft="662.583333333333,677.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9041,7 +9073,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Create1]"
-          TopLeft="1120.66666666667,501">
+          TopLeft="1066.91666666667,679.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9071,13 +9103,13 @@ where [refTable].[AnneeTemps] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-42.6522005208333,33.9063893016345,30.137734375,9.5537109375"
+              BoundingBox="-42.6522005208334,33.9063893016345,30.137734375,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Dimensions.Paths[Create]"
-          TopLeft="285.990739343757,499.452239111068">
+          TopLeft="232.240739343757,678.202239111068">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9156,142 +9188,50 @@ where [refTable].[AnneeTemps] = ?</property>
         <NodeLayout
           Size="554,42"
           Id="Package\Integration Fait\Filtrage des données (SituationMois, SalaireBrutAnnuelEstime, TauxInsertion, NombreReponses)"
-          TopLeft="448.666666666667,500.666666666666" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Integration Fait\Erreurs CSV"
-          TopLeft="654,788" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Integration Fait\CSV Source"
-          TopLeft="648.333333333333,33.333333333333" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Integration Fait\RechercheTemps"
-          TopLeft="639,423" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Integration Fait\RechercheLieux"
-          TopLeft="640.833333333333,344" />
-        <NodeLayout
-          Size="269,42"
-          Id="Package\Integration Fait\Filtrage des données  (TauxReponses)"
-          TopLeft="586.307692307692,571.653846153846" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Integration Fait\RechercheDiscipline"
-          TopLeft="630.333333333333,190.333333333333" />
+          TopLeft="17.666666666667,491.666666666666" />
         <NodeLayout
           Size="173,42"
           Id="Package\Integration Fait\RechercheDiplome"
-          TopLeft="634.333333333333,269.333333333333" />
+          TopLeft="203.333333333333,260.333333333333" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Integration Fait\Conversion en entier"
-          TopLeft="635,641" />
+          Size="159,42"
+          Id="Package\Integration Fait\RechercheLieux"
+          TopLeft="209.833333333333,335" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Integration Fait\Erreurs CSV"
+          TopLeft="223,779" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Integration Fait\CSV Source"
+          TopLeft="217.333333333333,24.333333333333" />
         <NodeLayout
           Size="125,42"
           Id="Package\Integration Fait\New Fact"
-          TopLeft="659,709" />
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
-          TopLeft="723.833333333333,465">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.6666666666661"
-              Start="0,0"
-              End="0,28.1666666666661">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.1666666666661" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,8.27864583333305,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance2]"
-          TopLeft="721.166666666667,386">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.9999999999999"
-              Start="0,0"
-              End="0,29.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,8.94531249999995,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="720.583333333333,311.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.6666666666667"
-              Start="0,0"
-              End="0,25.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,6.77864583333335,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="720.583333333333,232.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,8.9453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="228,700" />
+        <NodeLayout
+          Size="269,42"
+          Id="Package\Integration Fait\Filtrage des données  (TauxReponses)"
+          TopLeft="155.307692307692,562.653846153846" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Integration Fait\RechercheDiscipline"
+          TopLeft="199.333333333333,181.333333333333" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Integration Fait\RechercheTemps"
+          TopLeft="208,414" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Integration Fait\Conversion en entier"
+          TopLeft="204,632" />
+        <NodeLayout
+          Size="136,43"
+          Id="Package\Integration Fait\Horodatage"
+          TopLeft="222,102" />
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de conversion de données]"
-          TopLeft="723.25,683">
+          TopLeft="292.25,674">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9312,8 +9252,30 @@ where [refTable].[AnneeTemps] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
+          TopLeft="289.666666666667,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.333333333333"
+              Start="0,0"
+              End="0,28.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de colonne dérivée1]"
-          TopLeft="722.903846153846,613.653846153846">
+          TopLeft="291.903846153846,604.653846153846">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9335,7 +9297,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de colonne dérivée]"
-          TopLeft="723.237179487179,542.666666666666">
+          TopLeft="292.237179487179,533.666666666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9357,7 +9319,7 @@ where [refTable].[AnneeTemps] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie d'erreur de destination OLE DB]"
-          TopLeft="723,751">
+          TopLeft="292,742">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9379,13 +9341,9 @@ where [refTable].[AnneeTemps] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="136,43"
-          Id="Package\Integration Fait\Horodatage"
-          TopLeft="653,111" />
         <EdgeLayout
           Id="Package\Integration Fait.Paths[Sortie de source de fichier plat]"
-          TopLeft="719.416666666667,75.333333333333">
+          TopLeft="288.416666666667,66.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9406,32 +9364,106 @@ where [refTable].[AnneeTemps] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Integration Fait.Paths[Sortie de colonne dérivée2]"
-          TopLeft="720.666666666667,154">
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance3]"
+          TopLeft="292.833333333333,456">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.333333333333"
+              EndConnector="0,35.6666666666661"
               Start="0,0"
-              End="0,28.833333333333">
+              End="0,28.1666666666661">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.833333333333" />
+                    End="0,28.1666666666661" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.27864583333306,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="290.166666666667,377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.9999999999999"
+              Start="0,0"
+              End="0,29.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.94531249999994,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="289.583333333333,302.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.6666666666667"
+              Start="0,0"
+              End="0,25.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,6.77864583333334,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Integration Fait.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="289.583333333333,223.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,8.94531250000001,183.3540234375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheTemps">
+    design-time-name="Package\Integration Fait\RechercheDiplome">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -9441,7 +9473,7 @@ where [refTable].[AnneeTemps] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimTemps]</Value>
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -9477,6 +9509,19 @@ where [refTable].[AnneeTemps] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Integration Fait\New Fact">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Integration Fait\RechercheDiscipline">
     <Properties>
       <Property>
@@ -9500,7 +9545,7 @@ where [refTable].[AnneeTemps] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\RechercheDiplome">
+    design-time-name="Package\Integration Fait\RechercheTemps">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -9510,7 +9555,7 @@ where [refTable].[AnneeTemps] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[dbo].[DimTemps]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -9519,19 +9564,6 @@ where [refTable].[AnneeTemps] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Integration Fait\New Fact">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
